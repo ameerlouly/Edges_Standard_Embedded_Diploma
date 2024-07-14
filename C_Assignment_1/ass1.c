@@ -29,7 +29,7 @@ void printName()
 //3
 int toF(int c)
 {
-    return c * (9/5) + 32;
+    return c * (9.0/5) + 32;
 }
 
 //4
