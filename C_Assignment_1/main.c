@@ -120,8 +120,8 @@ int main()
 				scanf("%d", &x);
 				pyramid3(x);
 				break;
-   case 21:
-    printf("Enter number: ");
+			case 21:
+				printf("Enter number: ");
 				scanf("%d", &x);
 				printX(x);
 				break;
