@@ -10,6 +10,8 @@ int main()
 {
 	unsigned int month, year;
 
+	scanf("%d %d", month, year);
+
 	switch(month)
 	{
 	case 1:

@@ -22,8 +22,7 @@ int main()
 		if(15 <= age && 18 >= age)
 		{
 			printf("Did you succeed in the past exam?(0: yes, 1: no)");
-			fflush(stdin);
-			scanf("%d", &isSuccess);
+			scanf(" %d", &isSuccess);
 			switch(isSuccess)
 			{
 			case 0:
