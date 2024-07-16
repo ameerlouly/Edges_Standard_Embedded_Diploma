@@ -1,0 +1,41 @@
+01:59:58 **** Incremental Build of configuration Debug for project Ex ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ex.o" "..\\src\\Ex.c" 
+gcc -o Ex.exe "src\\Ex.o" 
+Info: Nothing to build for Ex
+16:25:58 **** Rebuild of configuration Debug for project array_ex1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex1.o" "..\\src\\array_ex1.c" 
+gcc -o array_ex1.exe "src\\array_ex1.o" 
+16:25:59 **** Rebuild of configuration Debug for project array_ex2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex2.o" "..\\src\\array_ex2.c" 
+gcc -o array_ex2.exe "src\\array_ex2.o" 
+16:25:59 **** Rebuild of configuration Debug for project array_ex3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex3.o" "..\\src\\array_ex3.c" 
+gcc -o array_ex3.exe "src\\array_ex3.o" 
+16:25:59 **** Rebuild of configuration Debug for project array_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex4.o" "..\\src\\array_ex4.c" 
+gcc -o array_ex4.exe "src\\array_ex4.o" 
+16:26:00 **** Rebuild of configuration Debug for project array_ex5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex5.o" "..\\src\\array_ex5.c" 
+gcc -o array_ex5.exe "src\\array_ex5.o" 
+16:26:00 **** Rebuild of configuration Debug for project array_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex6.o" "..\\src\\array_ex6.c" 
+gcc -o array_ex6.exe "src\\array_ex6.o" 
+16:26:01 **** Rebuild of configuration Debug for project array_ex7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex7.o" "..\\src\\array_ex7.c" 
+gcc -o array_ex7.exe "src\\array_ex7.o" 
+16:26:01 **** Rebuild of configuration Debug for project array_ex8 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex8.o" "..\\src\\array_ex8.c" 
+gcc -o array_ex8.exe "src\\array_ex8.o" 
+16:26:02 **** Rebuild of configuration Debug for project array_ex9 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex9.o" "..\\src\\array_ex9.c" 
+gcc -o array_ex9.exe "src\\array_ex9.o" 

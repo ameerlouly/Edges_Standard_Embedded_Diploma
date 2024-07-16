@@ -1,0 +1,202 @@
+16:03:34 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+..\src\struct_ex4.c: In function 'Student_By_Reference':
+..\src\struct_ex4.c:30:23: error: assignment of member 'first_name' in read-only object
+     s_ptr->first_name = "Ahmed";
+                       ^
+..\src\struct_ex4.c:31:24: error: assignment of member 'second_name' in read-only object
+     s_ptr->second_name = "khaled";
+                        ^
+..\src\struct_ex4.c:32:18: error: assignment of member 'grade' in read-only object
+     s_ptr->grade = 50;
+                  ^
+..\src\struct_ex4.c:33:15: error: assignment of member 'id' in read-only object
+     s_ptr->id = 2;
+               ^
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+16:04:42 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+gcc -o struct_ex4.exe "src\\struct_ex4.o" 
+Info: Nothing to build for struct_ex5
+16:04:43 **** Incremental Build of configuration Debug for project struct_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex6.o" "..\\src\\struct_ex6.c" 
+gcc -o struct_ex6.exe "src\\struct_ex6.o" 
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+21:09:57 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+..\src\struct_ex4.c: In function 'Student_By_Reference':
+..\src\struct_ex4.c:30:23: error: assignment of member 'first_name' in read-only object
+     s_ptr->first_name = "Ahmed";
+                       ^
+..\src\struct_ex4.c:31:24: error: assignment of member 'second_name' in read-only object
+     s_ptr->second_name = "khaled";
+                        ^
+..\src\struct_ex4.c:32:18: error: assignment of member 'grade' in read-only object
+     s_ptr->grade = 50;
+                  ^
+..\src\struct_ex4.c:33:15: error: assignment of member 'id' in read-only object
+     s_ptr->id = 2;
+               ^
+Info: Nothing to build for struct_ex5
+21:09:57 **** Incremental Build of configuration Debug for project struct_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex6.o" "..\\src\\struct_ex6.c" 
+gcc -o struct_ex6.exe "src\\struct_ex6.o" 
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+21:10:59 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+gcc -o struct_ex4.exe "src\\struct_ex4.o" 
+Info: Nothing to build for struct_ex5
+Info: Nothing to build for struct_ex6
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+Info: Nothing to build for struct_ex4
+Info: Nothing to build for struct_ex5
+21:30:22 **** Incremental Build of configuration Debug for project struct_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex6.o" "..\\src\\struct_ex6.c" 
+gcc -o struct_ex6.exe "src\\struct_ex6.o" 
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+11:39:39 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+..\src\struct_ex4.c: In function 'Student_By_Reference':
+..\src\struct_ex4.c:30:23: error: assignment of member 'first_name' in read-only object
+     s_ptr->first_name = "Ahmed";
+                       ^
+..\src\struct_ex4.c:31:24: error: assignment of member 'second_name' in read-only object
+     s_ptr->second_name = "khaled";
+                        ^
+..\src\struct_ex4.c:32:18: error: assignment of member 'grade' in read-only object
+     s_ptr->grade = 50;
+                  ^
+..\src\struct_ex4.c:33:15: error: assignment of member 'id' in read-only object
+     s_ptr->id = 2;
+               ^
+Info: Nothing to build for struct_ex5
+Info: Nothing to build for struct_ex6
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+21:06:33 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+gcc -o struct_ex4.exe "src\\struct_ex4.o" 
+Info: Nothing to build for struct_ex5
+21:06:34 **** Incremental Build of configuration Debug for project struct_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex6.o" "..\\src\\struct_ex6.c" 
+gcc -o struct_ex6.exe "src\\struct_ex6.o" 
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+21:33:42 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+..\src\struct_ex4.c: In function 'Student_By_Reference':
+..\src\struct_ex4.c:30:23: error: assignment of member 'first_name' in read-only object
+     s_ptr->first_name = "Ahmed";
+                       ^
+..\src\struct_ex4.c:31:24: error: assignment of member 'second_name' in read-only object
+     s_ptr->second_name = "khaled";
+                        ^
+..\src\struct_ex4.c:32:18: error: assignment of member 'grade' in read-only object
+     s_ptr->grade = 50;
+                  ^
+..\src\struct_ex4.c:33:15: error: assignment of member 'id' in read-only object
+     s_ptr->id = 2;
+               ^
+Info: Nothing to build for struct_ex5
+Info: Nothing to build for struct_ex6
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+Info: Nothing to build for enum_ex
+Info: Nothing to build for struct_ex1
+Info: Nothing to build for struct_ex2
+Info: Nothing to build for struct_ex3
+21:34:23 **** Incremental Build of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+gcc -o struct_ex4.exe "src\\struct_ex4.o" 
+Info: Nothing to build for struct_ex5
+Info: Nothing to build for struct_ex6
+Info: Nothing to build for struct_ex7
+Info: Nothing to build for union_ex
+16:26:36 **** Rebuild of configuration Debug for project enum_ex ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\enum_ex.o" "..\\src\\enum_ex.c" 
+gcc -o enum_ex.exe "src\\enum_ex.o" 
+16:26:37 **** Rebuild of configuration Debug for project struct_ex1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex1.o" "..\\src\\struct_ex1.c" 
+gcc -o struct_ex1.exe "src\\struct_ex1.o" 
+16:26:37 **** Rebuild of configuration Debug for project struct_ex2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex2.o" "..\\src\\struct_ex2.c" 
+gcc -o struct_ex2.exe "src\\struct_ex2.o" 
+16:26:38 **** Rebuild of configuration Debug for project struct_ex3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex3.o" "..\\src\\struct_ex3.c" 
+gcc -o struct_ex3.exe "src\\struct_ex3.o" 
+16:26:38 **** Rebuild of configuration Debug for project struct_ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex4.o" "..\\src\\struct_ex4.c" 
+gcc -o struct_ex4.exe "src\\struct_ex4.o" 
+16:26:39 **** Rebuild of configuration Debug for project struct_ex5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex5.o" "..\\src\\struct_ex5.c" 
+gcc -o struct_ex5.exe "src\\struct_ex5.o" 
+16:26:39 **** Rebuild of configuration Debug for project struct_ex6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex6.o" "..\\src\\struct_ex6.c" 
+gcc -o struct_ex6.exe "src\\struct_ex6.o" 
+16:26:40 **** Rebuild of configuration Debug for project struct_ex7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex7.o" "..\\src\\struct_ex7.c" 
+gcc -o struct_ex7.exe "src\\struct_ex7.o" 
+16:26:40 **** Rebuild of configuration Debug for project union_ex ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\union_ex.o" "..\\src\\union_ex.c" 
+..\src\union_ex.c: In function 'main':
+..\src\union_ex.c:24:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("The size of the union : %d\n",sizeof(D1));
+                                  ~^    ~~~~~~~~~~
+                                  %I64d
+..\src\union_ex.c:24:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("The size of the union : %d\n",sizeof(D1));
+                                  ~^    ~~~~~~~~~~
+                                  %I64d
+gcc -o union_ex.exe "src\\union_ex.o" 

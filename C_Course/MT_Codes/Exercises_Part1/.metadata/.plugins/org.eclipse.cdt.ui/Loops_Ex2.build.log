@@ -1,0 +1,7 @@
+14:37:23 **** Rebuild of configuration Debug for project Loops_Ex2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Loops_Ex2.o" "..\\src\\Loops_Ex2.c" 
+gcc -o Loops_Ex2.exe "src\\Loops_Ex2.o" 
+
+14:37:24 Build Finished. 0 errors, 0 warnings. (took 248ms)
+

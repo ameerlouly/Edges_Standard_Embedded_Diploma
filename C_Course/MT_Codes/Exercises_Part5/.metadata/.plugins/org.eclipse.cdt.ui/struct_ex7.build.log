@@ -1,0 +1,7 @@
+16:26:40 **** Rebuild of configuration Debug for project struct_ex7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\struct_ex7.o" "..\\src\\struct_ex7.c" 
+gcc -o struct_ex7.exe "src\\struct_ex7.o" 
+
+16:26:40 Build Finished. 0 errors, 0 warnings. (took 301ms)
+

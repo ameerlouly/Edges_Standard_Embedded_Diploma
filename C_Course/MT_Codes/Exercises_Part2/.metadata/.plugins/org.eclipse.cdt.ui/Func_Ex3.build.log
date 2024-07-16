@@ -1,0 +1,7 @@
+16:25:32 **** Rebuild of configuration Debug for project Func_Ex3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Func_Ex3.o" "..\\src\\Func_Ex3.c" 
+gcc -o Func_Ex3.exe "src\\Func_Ex3.o" 
+
+16:25:32 Build Finished. 0 errors, 0 warnings. (took 419ms)
+

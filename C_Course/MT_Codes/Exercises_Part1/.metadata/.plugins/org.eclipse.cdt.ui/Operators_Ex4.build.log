@@ -1,0 +1,7 @@
+15:02:05 **** Rebuild of configuration Debug for project Operators_Ex4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Operators_Ex4.o" "..\\src\\Operators_Ex4.c" 
+gcc -o Operators_Ex4.exe "src\\Operators_Ex4.o" 
+
+15:02:05 Build Finished. 0 errors, 0 warnings. (took 234ms)
+

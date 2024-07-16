@@ -1,0 +1,7 @@
+16:26:20 **** Rebuild of configuration Debug for project pointers_ex12 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\pointers_ex12.o" "..\\src\\pointers_ex12.c" 
+gcc -o pointers_ex12.exe "src\\pointers_ex12.o" 
+
+16:26:21 Build Finished. 0 errors, 0 warnings. (took 344ms)
+

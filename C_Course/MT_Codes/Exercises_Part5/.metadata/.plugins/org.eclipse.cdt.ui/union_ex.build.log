@@ -1,0 +1,16 @@
+16:26:40 **** Rebuild of configuration Debug for project union_ex ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\union_ex.o" "..\\src\\union_ex.c" 
+..\src\union_ex.c: In function 'main':
+..\src\union_ex.c:24:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("The size of the union : %d\n",sizeof(D1));
+                                  ~^    ~~~~~~~~~~
+                                  %I64d
+..\src\union_ex.c:24:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("The size of the union : %d\n",sizeof(D1));
+                                  ~^    ~~~~~~~~~~
+                                  %I64d
+gcc -o union_ex.exe "src\\union_ex.o" 
+
+16:26:40 Build Finished. 0 errors, 2 warnings. (took 313ms)
+

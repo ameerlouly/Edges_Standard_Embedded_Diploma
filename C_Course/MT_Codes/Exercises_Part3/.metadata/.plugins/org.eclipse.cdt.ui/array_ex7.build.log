@@ -1,0 +1,7 @@
+16:26:01 **** Rebuild of configuration Debug for project array_ex7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\array_ex7.o" "..\\src\\array_ex7.c" 
+gcc -o array_ex7.exe "src\\array_ex7.o" 
+
+16:26:01 Build Finished. 0 errors, 0 warnings. (took 257ms)
+

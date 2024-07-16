@@ -1,0 +1,88 @@
+16:26:23 **** Rebuild of configuration Debug for project pointers_ex8 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\pointers_ex8.o" "..\\src\\pointers_ex8.c" 
+..\src\pointers_ex8.c: In function 'main':
+..\src\pointers_ex8.c:25:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str1) = %u\n", sizeof(str1));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:25:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str1) = %u\n", sizeof(str1));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:26:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str2) = %u\n", sizeof(str2));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:26:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str2) = %u\n", sizeof(str2));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:27:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str3) = %u\n", sizeof(str3));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:27:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(str3) = %u\n", sizeof(str3));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:28:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(cPtr) = %u\n", sizeof(cPtr));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:28:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(cPtr) = %u\n", sizeof(cPtr));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:31:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sArr) = %u\n", sizeof(sArr));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:31:26: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sArr) = %u\n", sizeof(sArr));
+                         ~^     ~~~~~~~~~~~~
+                         %I64u
+..\src\pointers_ex8.c:32:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr1) = %u\n", sizeof(sPtr1));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+..\src\pointers_ex8.c:32:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr1) = %u\n", sizeof(sPtr1));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+..\src\pointers_ex8.c:33:28: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sArr2D) = %u\n", sizeof(sArr2D));
+                           ~^     ~~~~~~~~~~~~~~
+                           %I64u
+..\src\pointers_ex8.c:33:28: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sArr2D) = %u\n", sizeof(sArr2D));
+                           ~^     ~~~~~~~~~~~~~~
+                           %I64u
+..\src\pointers_ex8.c:34:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr2) = %u\n", sizeof(sPtr2));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+..\src\pointers_ex8.c:34:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr2) = %u\n", sizeof(sPtr2));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+..\src\pointers_ex8.c:35:28: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(*sPtr2) = %u\n", sizeof(*sPtr2));
+                           ~^     ~~~~~~~~~~~~~~
+                           %I64u
+..\src\pointers_ex8.c:35:28: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(*sPtr2) = %u\n", sizeof(*sPtr2));
+                           ~^     ~~~~~~~~~~~~~~
+                           %I64u
+..\src\pointers_ex8.c:36:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr3) = %u\n", sizeof(sPtr3));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+..\src\pointers_ex8.c:36:27: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long long unsigned int' [-Wformat=]
+  printf("sizeof(sPtr3) = %u\n", sizeof(sPtr3));
+                          ~^     ~~~~~~~~~~~~~
+                          %I64u
+gcc -o pointers_ex8.exe "src\\pointers_ex8.o" 
+
+16:26:23 Build Finished. 0 errors, 20 warnings. (took 312ms)
+
