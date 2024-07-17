@@ -8,8 +8,7 @@
 
 Diploma 91
 
-> [!IMPORTANT]
-
+> [!IMPORTANT]  
 > I do not own copyrights for materials of this diploma  
 This Repository is only to gather all the course material in one place for me and my colleagues  
 And for me to showcase my work in this Diploma
