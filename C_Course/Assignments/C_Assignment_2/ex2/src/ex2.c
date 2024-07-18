@@ -1,0 +1,27 @@
+/*
+ * ex2.c
+ *
+ *  Created on: Jul 18, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+char isAlphabet(char c)
+{
+	if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return 1;
+	else
+		return 0;
+}
+
+int main()
+{
+	char c;
+	scanf(" %c", &c);
+	if(isAlphabet(c))
+		printf("Is Alphabet");
+	else
+		printf("Not Alphabet");
+}
+
+
