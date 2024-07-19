@@ -1,0 +1,15 @@
+11:40:25 **** Build of configuration Debug for project part1_ex2 ****
+make all 
+Building file: ../ex2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ex2.d" -MT"ex2.o" -o "ex2.o" "../ex2.c"
+Finished building: ../ex2.c
+ 
+Building target: part1_ex2
+Invoking: GCC C Linker
+gcc  -o "part1_ex2" ./ex2.o   
+Finished building target: part1_ex2
+ 
+
+11:40:27 Build Finished. 0 errors, 0 warnings. (took 2s.50ms)
+

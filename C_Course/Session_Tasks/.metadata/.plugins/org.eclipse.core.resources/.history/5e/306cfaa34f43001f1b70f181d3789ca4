@@ -1,0 +1,21 @@
+/*
+ * ex1.c
+ *	Function Square
+ *  Created on: Jul 16, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+float square(float a);
+
+int main()
+{
+	int x;
+	scanf("%d", &x);
+	printf("Square = %f\n", square(x));
+}
+
+float square(float a)
+{
+	return a * a;
+}

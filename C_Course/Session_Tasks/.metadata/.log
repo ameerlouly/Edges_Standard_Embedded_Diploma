@@ -1,0 +1,100 @@
+!SESSION 2024-07-16 11:15:27.028 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.22
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:20:28.974
+!MESSAGE Indexed 'ex1' (1 sources, 25 headers) in 16.4 sec: 449 declarations; 1,058 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:20:37.007
+!MESSAGE Indexed 'ex2' (1 sources, 25 headers) in 6.73 sec: 447 declarations; 1,052 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:20:51.248
+!MESSAGE Indexed 'ex3' (1 sources, 25 headers) in 5.29 sec: 448 declarations; 1,046 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:21:04.344
+!MESSAGE Indexed 'ex4' (1 sources, 25 headers) in 4.03 sec: 449 declarations; 1,061 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2024-07-16 11:31:00.463 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.22
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/Edges_Standard_Embedded_Diploma/C_Course/Session_Tasks -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:35:24.051
+!MESSAGE Indexed 'part2_ex1' (0 sources, 0 headers) in 0.026 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2024-07-16 11:36:00.001
+!MESSAGE Error while evaluating enablement expression for org.eclipse.cdt.qt.ui.semanticHighlightings
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/ex1)[368]: java.lang.Exception: Resource '/ex1' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:145)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:393)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.matches(ContributedSemanticHighlighting.java:221)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.getSemanticHighlighter(ContributedSemanticHighlighting.java:242)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.consumes(ContributedSemanticHighlighting.java:268)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$AbstractPositionCollector.visitNode(SemanticHighlightingReconciler.java:232)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$AbstractPositionCollector.visit(SemanticHighlightingReconciler.java:194)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.accept(CASTName.java:132)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTDeclarator.accept(CASTDeclarator.java:171)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTFunctionDefinition.accept(CASTFunctionDefinition.java:139)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:289)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconcilePositions(SemanticHighlightingReconciler.java:450)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:413)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.reconciled(CEditor.java:3109)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:100)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.initialReconcile(CReconcilingStrategy.java:123)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:119)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.initialReconcile(CCompositeReconcilingStrategy.java:108)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.initialProcess(CReconciler.java:335)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2024-07-16 11:36:00.026
+!MESSAGE Resource '/ex1' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/ex1' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:145)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:393)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.matches(ContributedSemanticHighlighting.java:221)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.getSemanticHighlighter(ContributedSemanticHighlighting.java:242)
+	at org.eclipse.cdt.internal.ui.editor.ContributedSemanticHighlighting.consumes(ContributedSemanticHighlighting.java:268)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$AbstractPositionCollector.visitNode(SemanticHighlightingReconciler.java:232)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler$AbstractPositionCollector.visit(SemanticHighlightingReconciler.java:194)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTName.accept(CASTName.java:132)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTDeclarator.accept(CASTDeclarator.java:171)
+	at org.eclipse.cdt.internal.core.dom.parser.c.CASTFunctionDefinition.accept(CASTFunctionDefinition.java:139)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:289)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconcilePositions(SemanticHighlightingReconciler.java:450)
+	at org.eclipse.cdt.internal.ui.editor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:413)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.reconciled(CEditor.java:3109)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:100)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.initialReconcile(CReconcilingStrategy.java:123)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:119)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.initialReconcile(CCompositeReconcilingStrategy.java:108)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.initialProcess(CReconciler.java:335)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:36:02.357
+!MESSAGE Indexed 'part1_ex1' (0 sources, 0 headers) in 0.004 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:36:55.034
+!MESSAGE Indexed 'part1_ex2' (1 sources, 25 headers) in 9.04 sec: 447 declarations; 1,052 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:37:04.239
+!MESSAGE Indexed 'part1_ex4' (1 sources, 25 headers) in 5.36 sec: 449 declarations; 1,061 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-16 11:37:20.377
+!MESSAGE Indexed 'part1_ex3' (1 sources, 25 headers) in 4.28 sec: 448 declarations; 1,046 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
