@@ -1,15 +1,12 @@
-11:05:46 **** Build of configuration Debug for project ex3 ****
+02:40:51 **** Incremental Build of configuration Debug for project ex14 ****
 make all 
-Building file: ../src/ex3.c
+Building file: ../src/ex14.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ex3.d" -MT"src/ex3.o" -o "src/ex3.o" "../src/ex3.c"
-../src/ex3.c:20:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
-   20 | void main(void)
-      |      ^~~~
-Finished building: ../src/ex3.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ex14.d" -MT"src/ex14.o" -o "src/ex14.o" "../src/ex14.c"
+Finished building: ../src/ex14.c
  
-Building target: ex3
+Building target: ex14
 Invoking: GCC C Linker
-gcc  -o "ex3" ./src/ex3.o   
-Finished building target: ex3
+gcc  -o "ex14" ./src/ex14.o   
+Finished building target: ex14
  

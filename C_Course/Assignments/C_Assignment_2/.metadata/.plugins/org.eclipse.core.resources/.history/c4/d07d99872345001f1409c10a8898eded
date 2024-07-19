@@ -1,0 +1,26 @@
+/*
+ * ex4.c
+ *
+ *  Created on: Jul 18, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+int math(int x, int y, char c)
+{
+	switch(c)
+	{
+	case '+':
+		return x + y;
+		break;
+	case '-':
+		return x - y;
+		break;
+	case '*':
+		return x * y;
+		break;
+	case '/':
+		return x / y;
+		break;
+	}
+}

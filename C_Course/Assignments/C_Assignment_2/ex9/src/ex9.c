@@ -1,0 +1,25 @@
+/*
+ * ex9.c
+ *
+ *  Created on: Jul 18, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+void swap(int* x, int* y)
+{
+	*x ^= *y;
+	*y ^= *x;
+	*x ^= *y;
+}
+
+int main(void)
+{
+	int x= 10, y = 0;
+
+	printf("%d %d\n", x, y);
+	swap(&x, &y);
+	printf("%d %d\n", x, y);
+
+}
+

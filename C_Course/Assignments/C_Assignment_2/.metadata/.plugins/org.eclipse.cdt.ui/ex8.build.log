@@ -1,0 +1,15 @@
+20:05:42 **** Incremental Build of configuration Debug for project ex8 ****
+make all 
+Building file: ../src/ex8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ex8.d" -MT"src/ex8.o" -o "src/ex8.o" "../src/ex8.c"
+Finished building: ../src/ex8.c
+ 
+Building target: ex8
+Invoking: GCC C Linker
+gcc  -o "ex8" ./src/ex8.o   
+Finished building target: ex8
+ 
+
+20:05:44 Build Finished. 0 errors, 0 warnings. (took 2s.350ms)
+

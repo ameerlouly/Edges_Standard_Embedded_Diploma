@@ -5,8 +5,9 @@
  *      Author: ameer
  */
 #include <stdio.h>
+#include <stdlib.h>
 
-int math(int x, int y, char c)
+long math(int x, int y, char c)
 {
 	switch(c)
 	{
@@ -22,5 +23,16 @@ int math(int x, int y, char c)
 	case '/':
 		return x / y;
 		break;
+	default:
+		printf("Error");
+		return 0;
 	}
+}
+
+int main(void)
+{
+	int x, y;
+	char c;
+	scanf("%d %d %c", &x, &y, &c);
+	printf("%ld", math(x, y, c));
 }

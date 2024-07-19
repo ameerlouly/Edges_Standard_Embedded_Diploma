@@ -1,0 +1,18 @@
+/*
+ * ex13.c
+ *
+ *  Created on: Jul 19, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+int floorSum(float num1, float num2)
+{
+	int sum = num1 + num2;
+	return sum;
+}
+
+int main(void)
+{
+	printf("%d", floorSum(5.5f, 5.6f));
+}

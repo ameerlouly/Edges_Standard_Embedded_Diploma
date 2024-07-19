@@ -1,0 +1,15 @@
+19:49:28 **** Incremental Build of configuration Debug for project ex6 ****
+make all 
+Building file: ../src/ex6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ex6.d" -MT"src/ex6.o" -o "src/ex6.o" "../src/ex6.c"
+Finished building: ../src/ex6.c
+ 
+Building target: ex6
+Invoking: GCC C Linker
+gcc  -o "ex6" ./src/ex6.o   
+Finished building target: ex6
+ 
+
+19:49:30 Build Finished. 0 errors, 0 warnings. (took 2s.2ms)
+
