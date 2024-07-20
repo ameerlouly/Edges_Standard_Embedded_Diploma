@@ -1,4 +1,4 @@
-02:40:51 **** Incremental Build of configuration Debug for project ex14 ****
+20:15:10 **** Incremental Build of configuration Debug for project ex14 ****
 make all 
 Building file: ../src/ex14.c
 Invoking: GCC C Compiler
@@ -11,5 +11,5 @@ gcc  -o "ex14" ./src/ex14.o
 Finished building target: ex14
  
 
-02:40:53 Build Finished. 0 errors, 0 warnings. (took 2s.114ms)
+20:15:12 Build Finished. 0 errors, 0 warnings. (took 2s.138ms)
 

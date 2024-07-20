@@ -6,12 +6,12 @@
  */
 #include <stdio.h>
 
-void printFibo(int n1, int n2, int n)
+int printFibo(int n1, int n2, int n)
 {
 	if(n2 >= n)
-		return;
+		return n2;
 
-	printFibo(n1, n1 + n2, n);
+	return printf("%d", 0 + printFibo(1, 1, n));
 }
 
 int main(void)

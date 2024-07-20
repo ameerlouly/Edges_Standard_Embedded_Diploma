@@ -9,9 +9,9 @@
 void printFibo(int n1, int n2, int n)
 {
 	if(n2 >= n)
-		return;
+		return n1;
 
-	printFibo(n1, n1 + n2, n);
+	printf("%d", printFibo(n1, n1 + n2, n));
 }
 
 int main(void)

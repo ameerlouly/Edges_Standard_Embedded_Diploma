@@ -1,4 +1,4 @@
-02:40:51 **** Incremental Build of configuration Debug for project ex14 ****
+20:15:10 **** Incremental Build of configuration Debug for project ex14 ****
 make all 
 Building file: ../src/ex14.c
 Invoking: GCC C Compiler
