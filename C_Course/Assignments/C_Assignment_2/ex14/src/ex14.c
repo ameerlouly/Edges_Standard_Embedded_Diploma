@@ -6,16 +6,16 @@
  */
 #include <stdio.h>
 
-void printFibo(int n1, int n2, int n)
+int printFibo(int n)
 {
-	if(n2 >= n)
-		return;
+	if(n < 2)
+		return n;
 
-	printFibo(n1, n1 + n2, n);
+	return printFibo(n - 1) + printFibo(n - 2);
 }
 
 int main(void)
 {
-	printFibo(0, 1, 100);
+	printf("%d ", printFibo(20));
 	return 0;
 }
