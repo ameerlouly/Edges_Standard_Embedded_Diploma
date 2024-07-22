@@ -1,0 +1,19 @@
+/*
+ * arrays_ex1.c
+ *
+ *  Created on: Jul 22, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+#define SIZE 5
+
+int main()
+{
+	int arr[SIZE];
+
+	for(int i = 0; i < SIZE; i++)
+		scanf("%d", arr + i);
+
+
+}
+

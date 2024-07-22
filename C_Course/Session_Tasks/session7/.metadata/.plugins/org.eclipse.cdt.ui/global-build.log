@@ -1,0 +1,20 @@
+12:44:06 **** Build of configuration Debug for project linear_search ****
+make all 
+Building file: ../src/arr_ex.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arr_ex.d" -MT"src/arr_ex.o" -o "src/arr_ex.o" "../src/arr_ex.c"
+Finished building: ../src/arr_ex.c
+ 
+Building file: ../src/linear_search.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/linear_search.d" -MT"src/linear_search.o" -o "src/linear_search.o" "../src/linear_search.c"
+Finished building: ../src/linear_search.c
+ 
+Building target: linear_search
+Invoking: GCC C Linker
+gcc  -o "linear_search" ./src/arr_ex.o ./src/linear_search.o   
+Finished building target: linear_search
+ 
+12:44:25 **** Incremental Build of configuration Debug for project linear_search ****
+make all 
+make: Nothing to be done for 'all'.

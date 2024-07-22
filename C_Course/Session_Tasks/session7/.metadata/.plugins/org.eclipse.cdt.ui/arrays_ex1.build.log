@@ -1,0 +1,15 @@
+10:35:14 **** Incremental Build of configuration Debug for project arrays_ex1 ****
+make all 
+Building file: ../src/arrays_ex1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arrays_ex1.d" -MT"src/arrays_ex1.o" -o "src/arrays_ex1.o" "../src/arrays_ex1.c"
+Finished building: ../src/arrays_ex1.c
+ 
+Building target: arrays_ex1
+Invoking: GCC C Linker
+gcc  -o "arrays_ex1" ./src/arrays_ex1.o   
+Finished building target: arrays_ex1
+ 
+
+10:35:15 Build Finished. 0 errors, 0 warnings. (took 1s.857ms)
+

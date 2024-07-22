@@ -1,0 +1,6 @@
+12:44:25 **** Incremental Build of configuration Debug for project linear_search ****
+make all 
+make: Nothing to be done for 'all'.
+
+12:44:26 Build Finished. 0 errors, 0 warnings. (took 791ms)
+

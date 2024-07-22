@@ -1,0 +1,22 @@
+/*
+ * ex5.c
+ *
+ *  Created on: Jul 22, 2024
+ *      Author: ameer
+ */
+#include <stdio.h>
+
+int main(void)
+{
+	int num = 351, sum = 0;
+
+	do
+	{
+		sum += num % 10;
+	}
+	while(num /= 10);
+
+	printf("%d", sum);
+
+	return 0;
+}
