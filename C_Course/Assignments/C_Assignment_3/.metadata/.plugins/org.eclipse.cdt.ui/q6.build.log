@@ -1,0 +1,20 @@
+23:09:31 **** Build of configuration Debug for project q6 ****
+make all 
+Building file: ../src/linear_search.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/linear_search.d" -MT"src/linear_search.o" -o "src/linear_search.o" "../src/linear_search.c"
+Finished building: ../src/linear_search.c
+ 
+Building file: ../src/q6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/q6.d" -MT"src/q6.o" -o "src/q6.o" "../src/q6.c"
+Finished building: ../src/q6.c
+ 
+Building target: q6
+Invoking: GCC C Linker
+gcc  -o "q6" ./src/linear_search.o ./src/q6.o   
+Finished building target: q6
+ 
+
+23:09:34 Build Finished. 0 errors, 0 warnings. (took 2s.900ms)
+

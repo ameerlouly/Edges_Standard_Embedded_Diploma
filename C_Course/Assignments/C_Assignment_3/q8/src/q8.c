@@ -1,0 +1,26 @@
+/*
+================================================================
+	Name		: q7.c
+	Created on	: Jul 22, 2024
+	Author		: ameer
+	Description	: Computes the nth term of the series
+					1, 3, 9, 27 ......
+=================================================================
+ */
+
+
+#include <stdio.h>
+
+int nthTerm(int n)
+{
+	int val = 1;
+		for(int i = 0; i < n; i++)
+			val *= 3;
+	return val;
+}
+
+int main(void)
+{
+	printf("%d", nthTerm(10));
+	return 0;
+}
