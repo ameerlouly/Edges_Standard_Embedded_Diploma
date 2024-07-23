@@ -1,0 +1,28 @@
+/*
+================================================================
+	Name		: q12.c
+	Created on	: Jul 23, 2024
+	Author		: ameer
+	Description	: similar to strlen find the lenghts of a string
+=================================================================
+ */
+#include <stdio.h>
+
+int findLength(char *c)
+{
+	int counter = 0;
+	while(c[counter])
+		counter++;
+	return counter;
+}
+
+int main(void)
+{
+	char c[] = "How many letters are in Embedded C";
+	printf("%s\n%d", findLenght(c));
+	return 0;
+}
+
+
+
+

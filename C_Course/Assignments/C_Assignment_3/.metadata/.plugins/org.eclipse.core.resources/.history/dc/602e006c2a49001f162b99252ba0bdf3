@@ -1,0 +1,25 @@
+/*
+================================================================
+	Name		: q11.c
+	Created on	: Jul 23, 2024
+	Author		: ameer
+	Description	:
+=================================================================
+ */
+
+int findFreq(char *c, char target)
+{
+	int freq = 0;
+	for(int i = 0; c[i]; i++)
+		if(c[i] == target)
+			freq++;
+	return freq;
+}
+
+int main(void)
+{
+	char c[] = "How many es are in ameer and elephant";
+	printf("%s\n%d", c, findFreq(c, 'e'))
+}
+
+
