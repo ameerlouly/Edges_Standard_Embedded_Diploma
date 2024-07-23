@@ -1,0 +1,31 @@
+/*
+================================================================
+	Name		: q8.c
+	Created on	: Jul 23, 2024
+	Author		: ameer
+	Description	: Counts the numbers of even and odd elements
+				  in an array of integers
+=================================================================
+ */
+#include <stdio.h>
+#define SIZE 10
+
+void countEvenOdd(int* arr, int size, int* evenCount, int oddCount)
+{
+	evenCount = 0;
+	oddCount  = 0;
+
+	for(int i = 0; i < size; i++)
+		if(arr[i] % 2 == 0)
+			evenCount++;
+		else
+			oddCount++;
+}
+
+int main(void)
+{
+	int arr[SIZE] = {1, 2, 4, 6, 7, 8, 9, 10, 23, 50};
+	int even, odd;
+	countEvenOdd(arr, SIZE, even, odd);
+	printf("%d %d", even, odd);
+}

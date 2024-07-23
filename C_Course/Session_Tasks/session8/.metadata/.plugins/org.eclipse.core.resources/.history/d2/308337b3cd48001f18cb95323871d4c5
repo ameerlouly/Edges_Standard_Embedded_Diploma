@@ -1,0 +1,27 @@
+/*
+================================================================
+	Name		: ex6.c
+	Created on	: Jul 23, 2024
+	Author		: ameer
+	Description	: Same as ex6 in part 2
+				  Idea of masking for interfacing, display in binary
+=================================================================
+ */
+#include <stdio.h>
+
+void print_binary(unsigned int num)
+{
+	unsigned int mask = 0x80000000; //1000000000000000000... , 1 on the left and all zeros
+
+	for(int i = 0; i < 32; i++)
+		(num << i) & mask ? printf("1") : printf("0");
+	//ANDing by 1 gets the same value of the bit
+	//prints the number bit by bit by ANDing it with the mask
+	//by shifting we can print each bit alone
+}
+
+int main(void)
+{
+
+	return 0;
+}

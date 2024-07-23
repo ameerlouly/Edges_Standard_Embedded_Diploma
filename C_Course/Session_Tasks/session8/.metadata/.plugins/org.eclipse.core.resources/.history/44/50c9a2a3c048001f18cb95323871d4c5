@@ -1,0 +1,17 @@
+/*
+================================================================
+	Name		: test.c
+	Created on	: Jul 23, 2024
+	Author		: ameer
+	Description	: For me to test certain codes during session
+=================================================================
+ */
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char ch[] = "Hello";
+	char ch2[20] = "Hello";
+	int size1 = sizeof(ch)/sizeof(ch[0]);
+}

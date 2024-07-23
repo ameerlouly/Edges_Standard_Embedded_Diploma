@@ -1,0 +1,28 @@
+09:57:05 **** Build of configuration Debug for project test ****
+make all 
+Building file: ../test.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test.d" -MT"test.o" -o "test.o" "../test.c"
+../test.c: In function ‘main’:
+../test.c:20:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+   20 |         printf("%d %d\n", strlen(ch), strlen(ch2));
+      |                 ~^        ~~~~~~~~~~
+      |                  |        |
+      |                  int      size_t {aka long unsigned int}
+      |                 %ld
+../test.c:20:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+   20 |         printf("%d %d\n", strlen(ch), strlen(ch2));
+      |                    ~^                 ~~~~~~~~~~~
+      |                     |                 |
+      |                     int               size_t {aka long unsigned int}
+      |                    %ld
+Finished building: ../test.c
+ 
+Building target: test
+Invoking: GCC C Linker
+gcc  -o "test" ./test.o   
+Finished building target: test
+ 
+
+09:57:08 Build Finished. 0 errors, 2 warnings. (took 2s.730ms)
+
