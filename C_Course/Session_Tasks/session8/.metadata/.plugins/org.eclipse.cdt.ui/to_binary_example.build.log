@@ -10,3 +10,6 @@ Invoking: GCC C Linker
 gcc  -o "to_binary_example" ./ex6.o   
 Finished building target: to_binary_example
  
+
+11:44:27 Build Finished. 0 errors, 0 warnings. (took 2s.428ms)
+
