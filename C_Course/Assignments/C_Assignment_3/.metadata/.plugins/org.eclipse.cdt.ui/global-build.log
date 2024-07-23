@@ -1,12 +1,12 @@
-23:17:37 **** Build of configuration Debug for project q8 ****
+14:02:43 **** Incremental Build of configuration Debug for project q9 ****
 make all 
-Building file: ../src/q8.c
+Building file: ../src/q9.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/q8.d" -MT"src/q8.o" -o "src/q8.o" "../src/q8.c"
-Finished building: ../src/q8.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/q9.d" -MT"src/q9.o" -o "src/q9.o" "../src/q9.c"
+Finished building: ../src/q9.c
  
-Building target: q8
+Building target: q9
 Invoking: GCC C Linker
-gcc  -o "q8" ./src/q8.o   
-Finished building target: q8
+gcc  -o "q9" ./src/q9.o   
+Finished building target: q9
  
