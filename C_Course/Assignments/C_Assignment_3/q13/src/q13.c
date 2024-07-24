@@ -3,7 +3,7 @@
 	Name		: q13.c
 	Created on	: Jul 23, 2024
 	Author		: ameer
-	Description	:
+	Description	: Removes all non alphabet characters in a string
 =================================================================
  */
 #include <stdio.h>

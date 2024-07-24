@@ -1,7 +1,8 @@
+LaunchTargetManager/configs/q14.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:q7
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:q7,org.eclipse.launchbar.core.descriptorType.default\:q14.exe,org.eclipse.launchbar.core.descriptorType.default\:q15.exe,org.eclipse.launchbar.core.descriptorType.default\:q16.exe,org.eclipse.launchbar.core.descriptorType.default\:q18.exe
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:q7/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:q7/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
