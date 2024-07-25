@@ -24,7 +24,9 @@
 
 ## Memes from MT :D
 
-![](https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/451643631_10228685248948737_8244979834050108463_n.jpg?stp=dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=u3BY6VUBtpwQ7kNvgEuYaiC&_nc_ht=scontent.fcai19-2.fna&oh=00_AYASOzpJn5tcRQVgZTMhVdLZMMfeFACuHUjrCK3LykFuaA&oe=66A85D5B)
+<p align="center">
+  <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/451643631_10228685248948737_8244979834050108463_n.jpg?stp=dst-jpg_p180x540&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=u3BY6VUBtpwQ7kNvgEuYaiC&_nc_ht=scontent.fcai19-2.fna&oh=00_AYASOzpJn5tcRQVgZTMhVdLZMMfeFACuHUjrCK3LykFuaA&oe=66A85D5B" />
+</p>
 
 <p align="center">
   <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/451482195_10228685251908811_7609953663177430924_n.jpg?stp=dst-jpg_p552x414&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Kf1lXGAzGOQQ7kNvgHL8_3n&_nc_ht=scontent.fcai19-2.fna&oh=00_AYAbMpKr9SFd2Qe9-Z5wbchLywcPotbrnbGGmWrrbCRkRg&oe=66A86EBC" />
@@ -56,16 +58,4 @@
 
 <p align="center">
   <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/452612616_10228742161651519_8579832235820116230_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=a1zXedk9_TgQ7kNvgG5764J&_nc_ht=scontent.fcai19-2.fna&oh=00_AYDEtQqLJTdL4TlIhGYhzDAN0ATXveU8MzGvAe6qk2Kmlg&oe=66A87426" />
-</p>
-
-<p align="center">
-  <img src="" />
-</p>
-
-<p align="center">
-  <img src="" />
-</p>
-
-<p align="center">
-  <img src="" />
 </p>
