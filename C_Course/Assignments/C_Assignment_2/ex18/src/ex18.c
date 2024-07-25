@@ -9,16 +9,18 @@
 
 int isPowerofThree(int n)
 {
-	if (n <= 0)
-	        return 1;
+	if (n == 3)
+	        return 0;
 	if (n % 3 == 0)
-	        return isPowerofThree(n / 3);
-	return 1;
+	    return isPowerofThree(n / 3);
+	else
+		return 1;
+	
 }
 
 int main()
 {
-	printf("%d", isPowerofThree(27));
+	printf("%d", isPowerofThree(28));
 	return 0;
 }
 
