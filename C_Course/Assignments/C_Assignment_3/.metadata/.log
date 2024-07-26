@@ -5272,3 +5272,45 @@ java.nio.file.InvalidPathException: Illegal char <:> at index 42: /home/Edges_St
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-07-26 02:05:31.743
 !MESSAGE Indexed 'q22' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-07-26 02:44:23.782
+!MESSAGE Auto sharing project with git failed
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 42: /home/Edges_Standard_Embedded_Diploma/.git:
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at sun.nio.fs.AbstractPath.resolve(Unknown Source)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:472)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:435)
+	at org.eclipse.egit.core.RepositoryUtil.getConfiguredRepositories(RepositoryUtil.java:482)
+	at org.eclipse.egit.core.RepositoryUtil.addConfiguredRepository(RepositoryUtil.java:506)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:727)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:648)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-26 02:44:24.190
+!MESSAGE Indexed 'q23' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-07-26 03:16:31.331
+!MESSAGE Auto sharing project with git failed
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 42: /home/Edges_Standard_Embedded_Diploma/.git:
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at sun.nio.fs.AbstractPath.resolve(Unknown Source)
+	at org.eclipse.egit.core.RepositoryUtil.toDirSet(RepositoryUtil.java:472)
+	at org.eclipse.egit.core.RepositoryUtil.getRepositories(RepositoryUtil.java:435)
+	at org.eclipse.egit.core.RepositoryUtil.getConfiguredRepositories(RepositoryUtil.java:482)
+	at org.eclipse.egit.core.RepositoryUtil.addConfiguredRepository(RepositoryUtil.java:506)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.visitConnect(Activator.java:727)
+	at org.eclipse.egit.core.Activator$CheckProjectsToShare.run(Activator.java:648)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-26 03:16:31.687
+!MESSAGE Indexed 'q24' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

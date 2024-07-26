@@ -33,6 +33,7 @@ int main(void)
 	int arr1[] = {1,2,3,3,3,4,4,5,5,5};
 	int arr2[10];
 	int size2;
+
 	for(int i = 0; i < 10; i++)
 		printf("%d, ", arr1[i]);
 
