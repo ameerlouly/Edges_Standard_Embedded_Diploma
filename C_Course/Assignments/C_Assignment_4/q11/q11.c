@@ -8,7 +8,7 @@
  */
 #include <stdio.h>
 
-void swapBinary(int *num)
+void swapBinary(unsigned int *num)
 {
     int temp = *num & 0xFFFF0000;
     temp >>= 16;
@@ -16,10 +16,21 @@ void swapBinary(int *num)
     *num += temp;
 }
 
+void swapBinary_anotherMethod(unsigned int *num)
+{
+    short* ptr1 = (short *)num;
+    short* ptr2 = ptr1 + 1;
+    *ptr1 ^= *ptr2;
+    *ptr2 ^= *ptr1;
+    *ptr1 ^= *ptr2;
+}
+
 int main(void)
 {
-    int x = 0x1234abcd;
+    unsigned int x = 0x1234abcd;
     printf("%X\n", x);
     swapBinary(&x);
+    printf("%X\n", x);
+    swapBinary_anotherMethod(&x);
     printf("%X\n", x);
 }
