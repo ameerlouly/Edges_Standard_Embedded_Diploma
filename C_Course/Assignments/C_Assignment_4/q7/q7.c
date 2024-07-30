@@ -20,7 +20,7 @@ int main(void)
     int x = 8;
     int y = 10;
 
-    void (*ptr)(int*, int*) = &swap; //pointer to function
+    void (*ptr)(int*, int*) = swap; //pointer to function
 
     printf("\n%d %d", x, y);
 
