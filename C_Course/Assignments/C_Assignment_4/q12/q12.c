@@ -20,7 +20,7 @@ int odd_repititions(int *arr, int size)
             return arr[i];
     }
 
-    return 0xFFFFFFFF; // on failure of fiding the number with off repititions
+    return 0xFFFFFFFF; // on failure of fiding the number with odd repititions
 }
 
 int main(void)

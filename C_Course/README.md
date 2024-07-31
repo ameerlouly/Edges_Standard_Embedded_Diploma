@@ -8,7 +8,11 @@
 
 ### [Geeks for Geeks:](https://www.geeksforgeeks.org/c-programming-language/) The best website to learn C
 
-### [Fibonacci Series Question](https://www.youtube.com/watch?v=dxyYP3BSdcQ) Question in Assignment 2
+### [Fibonacci Series Question:](https://www.youtube.com/watch?v=dxyYP3BSdcQ) Question in Assignment 2
+
+### [100 C Interview Questions:](https://aticleworld.com/c-interview-questions/#.WiBj2dD5zfQ.facebook) Study before C Exam
+
+### [Bit Masking Video:](https://www.youtube.com/watch?v=QXaW5lj7Rs0) Useful for getting started in Interfacing Course
 
 ## Sorting Algorithms
 ### [Firmcodes: Sorting ALgorithms in C](http://www.firmcodes.com/sorting-algorithms-in-c/) 
@@ -20,7 +24,12 @@
 
 ### [Strong of String in C](https://www.geeksforgeeks.org/storage-for-strings-in-c/) 
 
+## Pointers
+### [What’s difference between “array” and “&array” for “int array[5]” ?:](https://www.geeksforgeeks.org/whats-difference-between-array-and-array-for-int-array5/) Geeks for Geeks
 
+### [Pointers in C/C++ Full Course:](https://www.youtube.com/watch?v=zuegQmMdy8M) FreeCodeCamp.org video
+
+### [Pointers and Dynamic Memory Allocation Playlist:](https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_) Refer to before if you forget anything from the session
 
 ## Memes from MT :D
 
@@ -58,4 +67,33 @@
 
 <p align="center">
   <img src="https://scontent.fcai19-2.fna.fbcdn.net/v/t39.30808-6/452612616_10228742161651519_8579832235820116230_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=a1zXedk9_TgQ7kNvgG5764J&_nc_ht=scontent.fcai19-2.fna&oh=00_AYDEtQqLJTdL4TlIhGYhzDAN0ATXveU8MzGvAe6qk2Kmlg&oe=66A87426" />
+</p>
+
+<p align="center">
+  <img src="https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/453490783_10228793368971670_2343680378146138956_n.jpg?stp=dst-jpg_p526x296&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=h7QWqlghtaYQ7kNvgHdLCVw&_nc_ht=scontent.fcai2-2.fna&gid=Am70V1rqpDWkQc8OkrShZa0&oh=00_AYBibGGTw2MEUqCOeOZ8iyjXKsxn-2uZ8r-TUY1FCZU9Jw&oe=66AF3306 "/>
+</p>
+
+<p align="center">
+  <img src="https://scontent.fcai2-1.fna.fbcdn.net/v/t39.30808-6/453262280_10228793364051547_680892583290174115_n.jpg?stp=dst-jpg_p526x296&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YwTlLJvhw2YQ7kNvgEXCC40&_nc_ht=scontent.fcai2-1.fna&oh=00_AYDJWdeztjffkXSic9IAhYSWXKtqwDK3RBjwgLL1vcId4g&oe=66AF697A"/>
+</p>
+
+<p align="center">
+  <img src="https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/453739296_870492088321331_8892835473770777498_n.jpg?stp=dst-jpg_p75x225&_nc_cat=111&ccb=1-7&_nc_sid=bd9a62&_nc_ohc=-85LxUKcpSAQ7kNvgH26P99&_nc_ht=scontent.fcai2-2.fna&oh=00_AYBeKmr8suIXRJG21qYfKpAcur6nVj5FM_vaSpt8O__RLA&oe=66AF4108 "/>
+</p>
+<p align = "center">
+After 2 Pointers Sessions
+</p>
+
+<p align="center">
+  <img src=" https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/453105650_10228793381331979_2531873535926111409_n.jpg?stp=dst-jpg_p526x296&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_4M8BOa4rW0Q7kNvgF7xio3&_nc_ht=scontent.fcai2-2.fna&oh=00_AYAAka2DPeVYpmiVVDfb2wqAcWpap4gEoFj5dMWuvgsvLw&oe=66AF332E"/>
+</p>
+
+
+
+<p align="center">
+  <img src=" https://scontent.fcai2-1.fna.fbcdn.net/v/t39.30808-6/453274274_10228793374371805_5527509957656026566_n.jpg?stp=dst-jpg_p180x540&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=3fHCM4tV4AAQ7kNvgGirqQI&_nc_ht=scontent.fcai2-1.fna&oh=00_AYDmHrqXcbxKK0cy4xk98hibMDf9pAx5CbKS2JfKFkBBMw&oe=66AF5027"/>
+</p>
+
+<p align="center">
+  <img src="https://scontent.fcai2-1.fna.fbcdn.net/v/t39.30808-6/453190035_10228793359691438_615634423566165893_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=s53CpNNBBYoQ7kNvgF7iFaS&_nc_ht=scontent.fcai2-1.fna&oh=00_AYAU4TlGmqTXvwCe4ozpeF9b3sgV0B7GgVvypPx-Jpxdew&oe=66AF5908 "/>
 </p>

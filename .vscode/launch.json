@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/test/Documents/Edges_Standard_Embedded_Diploma/Edges_Standard_Embedded_Diploma/C_Assignment_1",
-      "program": "c:/Users/test/Documents/Edges_Standard_Embedded_Diploma/Edges_Standard_Embedded_Diploma/C_Assignment_1/build/Debug/outDebug",
+      "cwd": "c:/Users/test/Documents/Edges_Standard_Embedded_Diploma/Edges_Standard_Embedded_Diploma",
+      "program": "c:/Users/test/Documents/Edges_Standard_Embedded_Diploma/Edges_Standard_Embedded_Diploma/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
