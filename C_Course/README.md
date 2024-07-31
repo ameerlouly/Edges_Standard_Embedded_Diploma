@@ -80,9 +80,6 @@
 <p align="center">
   <img src="https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/453739296_870492088321331_8892835473770777498_n.jpg?stp=dst-jpg_p75x225&_nc_cat=111&ccb=1-7&_nc_sid=bd9a62&_nc_ohc=-85LxUKcpSAQ7kNvgH26P99&_nc_ht=scontent.fcai2-2.fna&oh=00_AYBeKmr8suIXRJG21qYfKpAcur6nVj5FM_vaSpt8O__RLA&oe=66AF4108 "/>
 </p>
-<p align = "center">
-After 2 Pointers Sessions
-</p>
 
 <p align="center">
   <img src=" https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/453105650_10228793381331979_2531873535926111409_n.jpg?stp=dst-jpg_p526x296&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_4M8BOa4rW0Q7kNvgF7xio3&_nc_ht=scontent.fcai2-2.fna&oh=00_AYAAka2DPeVYpmiVVDfb2wqAcWpap4gEoFj5dMWuvgsvLw&oe=66AF332E"/>
