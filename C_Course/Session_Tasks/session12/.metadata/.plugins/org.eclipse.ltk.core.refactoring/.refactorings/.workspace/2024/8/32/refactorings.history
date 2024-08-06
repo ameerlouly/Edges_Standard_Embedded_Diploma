@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Stack and Queues&apos; to &apos;Stacks_and_Queues&apos;" description="Rename resource &apos;Stack and Queues&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Stack and Queues" name="Stacks_and_Queues" stamp="1722934287554" updateReferences="true"/>
+</session>
