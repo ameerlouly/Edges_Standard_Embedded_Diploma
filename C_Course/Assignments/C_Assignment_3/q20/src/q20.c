@@ -11,7 +11,7 @@
 
 void descExclusive(unsigned char LowerValue, unsigned char UpperValue, unsigned char *output_arr, int *output_arr_size)
 {
-	if(LowerValue >= UpperValue)
+	if(LowerValue >= UpperValue || UpperValue - 1 == LowerValue)
 	{
 		output_arr[0] = output_arr[1] = 0xFF;
 		*output_arr_size = 2;

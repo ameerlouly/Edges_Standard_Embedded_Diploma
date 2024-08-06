@@ -14,7 +14,7 @@ void rmChar(char *c)
 	while(c[i])
 	{
 		j = i;
-		if(!((c[i] >= 'A' && c[i] <= 'Z') || (c[i] >= 'a' && c[i] <= 'z')))
+		if(!((c[i] >= 'A' && c[i] <= 'Z') || (c[i] >= 'a' && c[i] <= 'z'))) //could change if for while and get rid of the continue and j
 		{
 			while(c[j])
 			{

@@ -1,0 +1,20 @@
+/*
+================================================================
+	Name		: linkedList.c
+	Created on	: Aug 6, 2024
+	Author		: Ameer Louly
+	Description	: Contains linked list function defintions
+=================================================================
+ */
+#include "Linked_List.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+
+
+int search(const elemtype e)
+{
+
+}
+
+

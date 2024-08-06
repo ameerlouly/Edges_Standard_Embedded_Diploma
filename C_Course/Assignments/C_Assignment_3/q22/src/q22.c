@@ -2,7 +2,7 @@
 ================================================================
 	Name		: q22.c
 	Created on	: Jul 26, 2024
-	Author		: test
+	Author		: Ameer Louly
 	Description	: Removes all duplicates in an array
 =================================================================
  */
@@ -19,10 +19,10 @@ int removeDuplicates(int arr_old[], int n_old, int arr_new[], int *n_new)
 	}
 
 	*n_new = 0;
-	for(int oldArrIndex = 0; oldArrIndex < n_old; oldArrIndex++)
+	for(int oldArrIndex = 0; oldArrIndex < n_old - 1; oldArrIndex++) // dont forget the - 1 so u dont pass the array boundries
 	{
-		if(arr_old[oldArrIndex] == arr_old[oldArrIndex + 1])
-			continue;
+		if(arr_old[oldArrIndex] == arr_old[oldArrIndex + 1])    //can change the == to != and remove the continue 
+			continue;                                           //that way u take a copy of the last repeated instance of the nummber
 		arr_new[(*n_new)++] = arr_old[oldArrIndex];
 	}
 	return SMOOTH_OP;
