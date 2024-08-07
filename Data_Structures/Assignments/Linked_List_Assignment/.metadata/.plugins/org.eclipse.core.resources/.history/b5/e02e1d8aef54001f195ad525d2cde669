@@ -1,0 +1,46 @@
+/*
+================================================================
+	Name		: linkedList.c
+	Created on	: Aug 6, 2024
+	Author		: Ameer Louly
+	Description	: Contains linked list function defintions
+=================================================================
+ */
+#include "Linked_List.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+link head = (void*)0;
+
+void insertAtFirst(const elemtype e)
+{
+	link add = (link)malloc(sizeof(node));
+	assert(add);
+
+	add->next = head;
+	add->elem = e;
+
+	head = add;
+}
+
+int search(const elemtype e)
+{
+	if(head == NULL)
+		return -1;
+
+	link current = head;
+	int n = 1;
+
+	while(current)
+	{
+		if(current->elem == e)
+			return n;
+		n++;
+		current = current->next;
+	}
+
+	return -1;
+}
+
+

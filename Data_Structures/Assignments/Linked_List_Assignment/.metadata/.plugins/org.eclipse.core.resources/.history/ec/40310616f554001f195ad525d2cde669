@@ -1,9 +1,27 @@
 /*
 ==================================================================================================================================
-	Name		: ${file_name}
-	Created on	: ${date}
+	Name		: main.c
+	Created on	: Aug 7, 2024
 	Author		: Ameer Louly
 	Description	:
 ==================================================================================================================================
  */
+#include <stdio.h>
+#include "Linked_List.h"
 
+int main(void)
+{
+	insertAtFirst(60);
+	insertAtFirst(5);
+	insertAtFirst(23);
+	insertAtFirst(50);
+	insertAtFirst(10);
+	insertAtFirst(3);
+	insertAtFirst(11);
+
+	printList();
+
+	insertAndAdd(15, 3);
+
+	printList();
+}

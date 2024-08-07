@@ -1,0 +1,32 @@
+22:57:56 **** Incremental Build of configuration Debug for project LinkedListAssignment ****
+make all 
+Building file: ../src/linkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/linkedList.d" -MT"src/linkedList.o" -o "src/linkedList.o" "../src/linkedList.c"
+Finished building: ../src/linkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../linkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"linkedList.d" -MT"linkedList.o" -o "linkedList.o" "../linkedList.c"
+Finished building: ../linkedList.c
+ 
+Building target: LinkedListAssignment
+Invoking: GCC C Linker
+gcc  -o "LinkedListAssignment" ./src/linkedList.o ./src/main.o  ./linkedList.o   
+/usr/bin/ld: ./src/main.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/main.c:12: multiple definition of `head'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:14: first defined here
+/usr/bin/ld: ./linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:14: multiple definition of `head'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:14: first defined here
+/usr/bin/ld: ./linkedList.o: in function `insertAtFirst':
+/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:17: multiple definition of `insertAtFirst'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:17: first defined here
+/usr/bin/ld: ./linkedList.o: in function `search':
+/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:28: multiple definition of `search'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:29: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: LinkedListAssignment] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+22:57:59 Build Failed. 7 errors, 0 warnings. (took 2s.826ms)
+
