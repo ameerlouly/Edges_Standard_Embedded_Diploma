@@ -8,7 +8,16 @@
  */
 #include <stdio.h>
 
-typedef struct
+typedef union
 {
-    
+    char first_name[30];
+    char last_name[30];   
 } family_name;
+
+int main(void)
+{
+    family_name n1;
+    scanf("%s", n1.first_name);
+    printf("%s\n%ld", n1.last_name, sizeof(family_name));
+    return 0;
+}
