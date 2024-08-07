@@ -1,0 +1,23 @@
+13:34:10 **** Incremental Build of configuration Debug for project Exercise2_Queue ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Exercise2_Queue.o" "..\\src\\Exercise2_Queue.c" 
+gcc -o Exercise2_Queue.exe "src\\Exercise2_Queue.o" 
+Info: Nothing to build for Exercise2_Queue
+13:35:28 **** Rebuild of configuration Debug for project Exercise1_Stack ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Exercise1_Stack.o" "..\\src\\Exercise1_Stack.c" 
+gcc -o Exercise1_Stack.exe "src\\Exercise1_Stack.o" 
+13:35:29 **** Incremental Build of configuration Debug for project Exercise2_Queue ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Exercise2_Queue.o" "..\\src\\Exercise2_Queue.c" 
+gcc -o Exercise2_Queue.exe "src\\Exercise2_Queue.o" 
+21:39:11 **** Rebuild of configuration Debug for project Exercise1_Stack ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Exercise1_Stack.o" "..\\src\\Exercise1_Stack.c" 
+gcc -o Exercise1_Stack.exe "src\\Exercise1_Stack.o" 
+21:39:12 **** Rebuild of configuration Debug for project Exercise2_Queue ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Exercise2_Queue.o" "..\\src\\Exercise2_Queue.c" 
+gcc -o Exercise2_Queue.exe "src\\Exercise2_Queue.o" 
+Info: Nothing to build for Exercise1_Stack
+Info: Nothing to build for Exercise2_Queue
