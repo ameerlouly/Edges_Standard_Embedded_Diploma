@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+link head = (void*)0;
+
 bool insertAtFirst(const elemtype e)
 {
 	link add = (link)malloc(sizeof(node));
@@ -20,6 +22,7 @@ bool insertAtFirst(const elemtype e)
 	add->elem = e;
 
 	head = add;
+
 	return true;
 }
 
@@ -46,12 +49,13 @@ bool insertAndAdd(const elemtype e, int n)
 {
 	link add = (link)malloc(sizeof(node));
 	assert(add);
+	add->elem = e;
 
 	if(head == NULL)
 		return false;
 
 	link current = head;
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < n - 1; i++)
 	{
 		if(current->next == NULL)
 			return false;
@@ -71,7 +75,102 @@ void printList()
 
 	link current = head;
 	while(current)
+	{
 		printf("%d\t", current->elem);
+		current = current->next;
+	}
+
+	printf("\n");
 }
 
+elemtype findMiddle()
+{
+	link ptr1, ptr2;
 
+	ptr1 = ptr2 = head;
+
+	while(ptr2)
+	{
+		if(ptr2->next == NULL)
+			break;
+		ptr2 = ptr2->next->next;
+		ptr1 = ptr1->next;
+	}
+
+	return ptr1->elem;
+}
+
+int sizeOfList()
+{
+	if(head == NULL)
+		return 0;
+
+	link current = head;
+
+	int size = 0;
+	while(current)
+	{
+		current = current->next;
+		size++;
+	}
+
+	return size;
+}
+
+bool fifthFromBack(elemtype *fifth)
+{
+	link ptr1;
+
+	ptr1 = head;
+
+	if(head == NULL)
+		return false;
+	if(head->next == NULL)
+	{
+		*fifth = head->elem;
+		return true;
+	}
+	if(sizeOfList() > 5)
+		while(ptr1->next->next->next->next->next)
+			ptr1 = ptr1->next;
+	else
+		return false;
+
+	*fifth = ptr1->elem;
+	return true;
+}
+
+elemtype sumOfList()
+{
+	link current = head;
+
+	if(head == NULL)
+		return 0;
+
+	elemtype sum = 0;
+	while(current)
+	{
+		sum += current->elem;
+		current = current->next;
+	}
+
+	return sum;
+}
+
+elemtype maxInList()
+{
+	link current = head->next;
+
+	if(head == 0)
+		return 0;
+
+	elemtype max = head->elem;
+	while(current)
+	{
+		if(current->elem > max)
+			max = current->elem;
+		current = current->next;
+	}
+
+	return max;
+}

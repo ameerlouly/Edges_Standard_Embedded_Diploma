@@ -1,0 +1,41 @@
+/*
+================================================================
+	Name		: Linked_List.h
+	Created on	: Aug 6, 2024
+	Author		: Ameer Louly
+	Description	: Contains Node definitions and linked list functions
+=================================================================
+ */
+
+#ifndef LINKED_LIST_H_
+#define LINKED_LIST_H_
+
+	/*To allow linked list to store any type of data easily*/
+typedef int elemtype;
+
+	/*NODE DEFINITION*/
+struct node;
+typedef struct node* link;
+typedef struct node
+{
+	int elem;
+	link next;
+} node;
+
+	/*Bool datatype Definition*/
+typedef enum
+{
+	false,
+	true
+} bool;
+
+	/*FUNCTION PROTOTYPES*/
+bool insertAtFirst(const elemtype e);
+int search(const elemtype e);
+void printList();
+bool insertAndAdd(const elemtype e, int n);
+elemtype findMiddle();
+elemtype fifthFromBack();
+int sizeOfList());
+
+#endif /* LINKED_LIST_H_ */

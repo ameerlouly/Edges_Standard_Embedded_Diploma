@@ -1,0 +1,2 @@
+src/QueueProgram.o: ../src/QueueProgram.c ../src/Stacks_And_Queues.h
+../src/Stacks_And_Queues.h:

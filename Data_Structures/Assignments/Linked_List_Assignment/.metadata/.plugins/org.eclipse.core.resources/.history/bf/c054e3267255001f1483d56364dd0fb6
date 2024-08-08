@@ -1,0 +1,41 @@
+/*
+==================================================================================================================================
+	Name		: QueueProgram.c
+	Created on	: Aug 8, 2024
+	Author		: Ameer Louly
+	Description	: Function Definitions for Queue
+==================================================================================================================================
+ */
+#include "Stacks_And_Queues.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+link front = NULL, rear = NULL;
+
+void Enqueue(const elemtype e)
+{
+	link add = (link)malloc(sizeof(node));
+	add->elem = e;
+	add->next = NULL;
+
+	if(front == NULL)
+	{
+		front = add;
+		rear = add;
+	}
+
+	rear->next = add;
+	rear = add;
+}
+void Dequeue(void)
+{
+	link delete_node = front;
+
+
+
+}
+elemtype peek_queue(void);
+void printList_queue(void);
+
+

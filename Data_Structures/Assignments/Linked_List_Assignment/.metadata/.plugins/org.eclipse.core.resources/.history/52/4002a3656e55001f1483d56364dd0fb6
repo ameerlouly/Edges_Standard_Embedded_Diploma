@@ -1,0 +1,27 @@
+/*
+==================================================================================================================================
+	Name		: Stacks_And_Queues.h
+	Created on	: Aug 8, 2024
+	Author		: Ameer Louly
+	Description	:
+==================================================================================================================================
+ */
+
+#ifndef STACKS_AND_QUEUES_H_
+#define STACKS_AND_QUEUES_H_
+
+typedef int elemtype;
+
+struct node;
+typedef struct node* link;
+typedef struct
+{
+	elemtype elem;
+	link next;
+} node;
+
+	/*Stack Functions*/
+void push(const elemtype e);
+void pop(void);
+
+#endif /* STACKS_AND_QUEUES_H_ */

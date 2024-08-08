@@ -1,0 +1,57 @@
+/*
+==================================================================================================================================
+	Name		: StackProgram.c
+	Created on	: Aug 8, 2024
+	Author		: Ameer Louly
+	Description	: Function Defintions for Stack
+==================================================================================================================================
+ */
+#include "Stacks_And_Queues.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+link top = NULL;
+
+//Pushes items to the stack
+void push(const elemtype e)
+{
+	link add = (link)malloc(sizeof(node));
+	assert(add);
+
+	add->elem = e;
+
+	add->next = top;
+	top = add;
+}
+
+//Removes items from stack
+void pop(void)
+{
+	link delete_node = top;
+
+	if(top == NULL)
+		return;
+
+	top = top->next;
+
+	free(delete_node);
+}
+
+elemtype peek_stack(void)
+{
+	return top->elem;
+}
+
+void printList_stack(void)
+{
+	link current = top;
+
+	while(current)
+	{
+		printf("%d\t", current->elem);
+		current = current->next;
+	}
+
+}
+

@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include "Linked_List.h"
 
-link head = (void*)0;
 
 int main(void)
 {
@@ -24,7 +23,20 @@ int main(void)
 
 	printList();
 
+	printf("Middle Element: %d\n", findMiddle());
+
+	int x;
+	fifthFromBack(&x);
+	printf("Fifth Element from the back: %d\n", x);
+
 	insertAndAdd(15, 3);
 
 	printList();
+
+	printf("Middle Element: %d\n", findMiddle());
+
+	fifthFromBack(&x);
+	printf("Fifth Element from the back: %d\n", x);
+	printf("Sum of List: %d\n", sumOfList());
+	printf("Maximum in List: %d\n", maxInList());
 }

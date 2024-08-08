@@ -1,29 +1,40 @@
-22:57:56 **** Incremental Build of configuration Debug for project LinkedListAssignment ****
+13:26:57 **** Incremental Build of configuration Debug for project Stacks and Queues ****
 make all 
-Building file: ../src/linkedList.c
+make: Nothing to be done for 'all'.
+13:27:23 **** Incremental Build of configuration Debug for project Stacks and Queues ****
+make all 
+Building file: ../src/main.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/linkedList.d" -MT"src/linkedList.o" -o "src/linkedList.o" "../src/linkedList.c"
-Finished building: ../src/linkedList.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: Stacks and Queues
+Invoking: GCC C Linker
+gcc  -o "Stacks and Queues" ./src/QueueProgram.o ./src/StackProgram.o ./src/main.o   
+Finished building target: Stacks and Queues
+ 
+13:40:38 **** Incremental Build of configuration Debug for project Stacks and Queues ****
+make all 
+Building file: ../src/QueueProgram.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/QueueProgram.d" -MT"src/QueueProgram.o" -o "src/QueueProgram.o" "../src/QueueProgram.c"
+Finished building: ../src/QueueProgram.c
+ 
+Building file: ../src/StackProgram.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StackProgram.d" -MT"src/StackProgram.o" -o "src/StackProgram.o" "../src/StackProgram.c"
+Finished building: ../src/StackProgram.c
  
 Building file: ../src/main.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 Finished building: ../src/main.c
  
-Building file: ../linkedList.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"linkedList.d" -MT"linkedList.o" -o "linkedList.o" "../linkedList.c"
-Finished building: ../linkedList.c
- 
-Building target: LinkedListAssignment
+Building target: Stacks and Queues
 Invoking: GCC C Linker
-gcc  -o "LinkedListAssignment" ./src/linkedList.o ./src/main.o  ./linkedList.o   
-/usr/bin/ld: ./src/main.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/main.c:12: multiple definition of `head'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:14: first defined here
-/usr/bin/ld: ./linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:14: multiple definition of `head'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:14: first defined here
-/usr/bin/ld: ./linkedList.o: in function `insertAtFirst':
-/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:17: multiple definition of `insertAtFirst'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:17: first defined here
-/usr/bin/ld: ./linkedList.o: in function `search':
-/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../linkedList.c:28: multiple definition of `search'; ./src/linkedList.o:/home/Edges_Standard_Embedded_Diploma/Data_Structures/Assignments/Linked_List_Assignment/LinkedListAssignment/Debug/../src/linkedList.c:29: first defined here
-collect2: error: ld returned 1 exit status
-make: *** [makefile:32: LinkedListAssignment] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
+gcc  -o "Stacks and Queues" ./src/QueueProgram.o ./src/StackProgram.o ./src/main.o   
+Finished building target: Stacks and Queues
+ 
+13:40:47 **** Incremental Build of configuration Debug for project Stacks and Queues ****
+make all 
+make: Nothing to be done for 'all'.

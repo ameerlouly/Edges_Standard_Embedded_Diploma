@@ -22,6 +22,7 @@ typedef struct node
 	link next;
 } node;
 
+	/*Bool datatype Definition*/
 typedef enum
 {
 	false,
@@ -33,5 +34,10 @@ bool insertAtFirst(const elemtype e);
 int search(const elemtype e);
 void printList();
 bool insertAndAdd(const elemtype e, int n);
+elemtype findMiddle();
+bool fifthFromBack(elemtype *fifth);
+int sizeOfList();
+elemtype sumOfList();
+elemtype maxInList();
 
 #endif /* LINKED_LIST_H_ */
