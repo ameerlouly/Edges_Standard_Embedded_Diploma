@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ex6_part2&apos; to &apos;to_binary_example&apos;" description="Rename resource &apos;ex6_part2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ex6_part2" name="to_binary_example" stamp="1721723511484" updateReferences="true"/>
-</session>

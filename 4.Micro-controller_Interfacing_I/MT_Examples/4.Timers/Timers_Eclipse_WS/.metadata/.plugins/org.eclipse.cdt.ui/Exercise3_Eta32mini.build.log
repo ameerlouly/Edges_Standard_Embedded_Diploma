@@ -1,0 +1,20 @@
+18:37:46 **** Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:37:46 Build Finished. 0 errors, 0 warnings. (took 211ms)
+

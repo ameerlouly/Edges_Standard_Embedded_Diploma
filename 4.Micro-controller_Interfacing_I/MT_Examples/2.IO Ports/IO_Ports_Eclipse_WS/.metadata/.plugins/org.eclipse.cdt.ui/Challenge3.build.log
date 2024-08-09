@@ -1,0 +1,20 @@
+18:36:52 **** Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4872 bytes (14.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:36:52 Build Finished. 0 errors, 0 warnings. (took 211ms)
+

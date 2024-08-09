@@ -1,0 +1,255 @@
+
+Challenge4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000188  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000001  00800060  00800060  000001fc  2**0
+                  ALLOC
+  2 .stab         00000408  00000000  00000000  000001fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      000006ce  00000000  00000000  00000604  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__vector_7>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a1 36       	cpi	r26, 0x61	; 97
+  6c:	b1 07       	cpc	r27, r17
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 a6 00 	call	0x14c	; 0x14c <main>
+  74:	0c 94 c2 00 	jmp	0x184	; 0x184 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <__vector_7>:
+/* global variable contain the ticks count of the timer */
+unsigned char g_tick = 0;
+
+/* Interrupt Service Routine for timer0 compare mode */
+ISR(TIMER1_COMPA_vect)
+{
+  7c:	1f 92       	push	r1
+  7e:	0f 92       	push	r0
+  80:	0f b6       	in	r0, 0x3f	; 63
+  82:	0f 92       	push	r0
+  84:	11 24       	eor	r1, r1
+  86:	8f 93       	push	r24
+  88:	9f 93       	push	r25
+  8a:	af 93       	push	r26
+  8c:	bf 93       	push	r27
+  8e:	ef 93       	push	r30
+  90:	ff 93       	push	r31
+  92:	df 93       	push	r29
+  94:	cf 93       	push	r28
+  96:	cd b7       	in	r28, 0x3d	; 61
+  98:	de b7       	in	r29, 0x3e	; 62
+	g_tick++;
+  9a:	80 91 60 00 	lds	r24, 0x0060
+  9e:	8f 5f       	subi	r24, 0xFF	; 255
+  a0:	80 93 60 00 	sts	0x0060, r24
+	if(g_tick == 1)
+  a4:	80 91 60 00 	lds	r24, 0x0060
+  a8:	81 30       	cpi	r24, 0x01	; 1
+  aa:	79 f4       	brne	.+30     	; 0xca <__vector_7+0x4e>
+	{
+		PORTC ^= (1<<PC0);     /* Toggle PC0 Pin */
+  ac:	a5 e3       	ldi	r26, 0x35	; 53
+  ae:	b0 e0       	ldi	r27, 0x00	; 0
+  b0:	e5 e3       	ldi	r30, 0x35	; 53
+  b2:	f0 e0       	ldi	r31, 0x00	; 0
+  b4:	90 81       	ld	r25, Z
+  b6:	81 e0       	ldi	r24, 0x01	; 1
+  b8:	89 27       	eor	r24, r25
+  ba:	8c 93       	st	X, r24
+		OCR1A = 375;           /* Set the Compare value to 375 ((375/500) * 100 = 75%) */
+  bc:	ea e4       	ldi	r30, 0x4A	; 74
+  be:	f0 e0       	ldi	r31, 0x00	; 0
+  c0:	87 e7       	ldi	r24, 0x77	; 119
+  c2:	91 e0       	ldi	r25, 0x01	; 1
+  c4:	91 83       	std	Z+1, r25	; 0x01
+  c6:	80 83       	st	Z, r24
+  c8:	14 c0       	rjmp	.+40     	; 0xf2 <__vector_7+0x76>
+	}
+	else if(g_tick == 2)
+  ca:	80 91 60 00 	lds	r24, 0x0060
+  ce:	82 30       	cpi	r24, 0x02	; 2
+  d0:	81 f4       	brne	.+32     	; 0xf2 <__vector_7+0x76>
+	{
+		PORTC ^= (1<<PC0);     /* Toggle PC0 Pin */
+  d2:	a5 e3       	ldi	r26, 0x35	; 53
+  d4:	b0 e0       	ldi	r27, 0x00	; 0
+  d6:	e5 e3       	ldi	r30, 0x35	; 53
+  d8:	f0 e0       	ldi	r31, 0x00	; 0
+  da:	90 81       	ld	r25, Z
+  dc:	81 e0       	ldi	r24, 0x01	; 1
+  de:	89 27       	eor	r24, r25
+  e0:	8c 93       	st	X, r24
+		OCR1A = 125;           /* Set the Compare value to 125 ((125/500) * 100 = 25%) */
+  e2:	ea e4       	ldi	r30, 0x4A	; 74
+  e4:	f0 e0       	ldi	r31, 0x00	; 0
+  e6:	8d e7       	ldi	r24, 0x7D	; 125
+  e8:	90 e0       	ldi	r25, 0x00	; 0
+  ea:	91 83       	std	Z+1, r25	; 0x01
+  ec:	80 83       	st	Z, r24
+		g_tick = 0;            /* reset the ticks counter */
+  ee:	10 92 60 00 	sts	0x0060, r1
+	}
+}
+  f2:	cf 91       	pop	r28
+  f4:	df 91       	pop	r29
+  f6:	ff 91       	pop	r31
+  f8:	ef 91       	pop	r30
+  fa:	bf 91       	pop	r27
+  fc:	af 91       	pop	r26
+  fe:	9f 91       	pop	r25
+ 100:	8f 91       	pop	r24
+ 102:	0f 90       	pop	r0
+ 104:	0f be       	out	0x3f, r0	; 63
+ 106:	0f 90       	pop	r0
+ 108:	1f 90       	pop	r1
+ 10a:	18 95       	reti
+
+0000010c <Timer1_CTC_Square_Wave_Init>:
+ * In case we need 25% duty cycle we need to make the timer count 500 counts
+ * with 125 counts the value of the PC0 pin is high and 375 counts with low value.
+ * Compare interrupt will be generated every 125ms or 375ms to toggle PC0 value.
+ */
+void Timer1_CTC_Square_Wave_Init(void)
+{
+ 10c:	df 93       	push	r29
+ 10e:	cf 93       	push	r28
+ 110:	cd b7       	in	r28, 0x3d	; 61
+ 112:	de b7       	in	r29, 0x3e	; 62
+	TCNT1 = 0;		/* Set timer1 initial count to zero */
+ 114:	ec e4       	ldi	r30, 0x4C	; 76
+ 116:	f0 e0       	ldi	r31, 0x00	; 0
+ 118:	11 82       	std	Z+1, r1	; 0x01
+ 11a:	10 82       	st	Z, r1
+
+	OCR1A = 125;    /* Set the Compare value to 125 ((125/500) * 100 = 25%) */
+ 11c:	ea e4       	ldi	r30, 0x4A	; 74
+ 11e:	f0 e0       	ldi	r31, 0x00	; 0
+ 120:	8d e7       	ldi	r24, 0x7D	; 125
+ 122:	90 e0       	ldi	r25, 0x00	; 0
+ 124:	91 83       	std	Z+1, r25	; 0x01
+ 126:	80 83       	st	Z, r24
+
+	TIMSK |= (1<<OCIE1A); /* Enable Timer1 Compare A Interrupt */
+ 128:	a9 e5       	ldi	r26, 0x59	; 89
+ 12a:	b0 e0       	ldi	r27, 0x00	; 0
+ 12c:	e9 e5       	ldi	r30, 0x59	; 89
+ 12e:	f0 e0       	ldi	r31, 0x00	; 0
+ 130:	80 81       	ld	r24, Z
+ 132:	80 61       	ori	r24, 0x10	; 16
+ 134:	8c 93       	st	X, r24
+	/* Configure timer control register TCCR1A
+	 * 1. Disconnect OC1A and OC1B  COM1A1=0 COM1A0=0 COM1B0=0 COM1B1=0
+	 * 2. FOC1A=1 FOC1B=0
+	 * 3. CTC Mode WGM10=0 WGM11=0 (Mode Number 4)
+	 */
+	TCCR1A = (1<<FOC1A);
+ 136:	ef e4       	ldi	r30, 0x4F	; 79
+ 138:	f0 e0       	ldi	r31, 0x00	; 0
+ 13a:	88 e0       	ldi	r24, 0x08	; 8
+ 13c:	80 83       	st	Z, r24
+
+	/* Configure timer control register TCCR1B
+	 * 1. CTC Mode WGM12=1 WGM13=0 (Mode Number 4)
+	 * 2. Prescaler = F_CPU/8 CS10=0 CS11=1 CS12=0
+	 */
+	TCCR1B = (1<<WGM12) | (1<<CS11);
+ 13e:	ee e4       	ldi	r30, 0x4E	; 78
+ 140:	f0 e0       	ldi	r31, 0x00	; 0
+ 142:	8a e0       	ldi	r24, 0x0A	; 10
+ 144:	80 83       	st	Z, r24
+}
+ 146:	cf 91       	pop	r28
+ 148:	df 91       	pop	r29
+ 14a:	08 95       	ret
+
+0000014c <main>:
+
+int main(void)
+{
+ 14c:	df 93       	push	r29
+ 14e:	cf 93       	push	r28
+ 150:	cd b7       	in	r28, 0x3d	; 61
+ 152:	de b7       	in	r29, 0x3e	; 62
+	DDRC |= 0x01;   /* Configure PC0 as output pin */
+ 154:	a4 e3       	ldi	r26, 0x34	; 52
+ 156:	b0 e0       	ldi	r27, 0x00	; 0
+ 158:	e4 e3       	ldi	r30, 0x34	; 52
+ 15a:	f0 e0       	ldi	r31, 0x00	; 0
+ 15c:	80 81       	ld	r24, Z
+ 15e:	81 60       	ori	r24, 0x01	; 1
+ 160:	8c 93       	st	X, r24
+	PORTC |= 0x01;  /* Set PC0 pin */
+ 162:	a5 e3       	ldi	r26, 0x35	; 53
+ 164:	b0 e0       	ldi	r27, 0x00	; 0
+ 166:	e5 e3       	ldi	r30, 0x35	; 53
+ 168:	f0 e0       	ldi	r31, 0x00	; 0
+ 16a:	80 81       	ld	r24, Z
+ 16c:	81 60       	ori	r24, 0x01	; 1
+ 16e:	8c 93       	st	X, r24
+
+	SREG |= (1<<7); /* Enable global interrupts in MC */
+ 170:	af e5       	ldi	r26, 0x5F	; 95
+ 172:	b0 e0       	ldi	r27, 0x00	; 0
+ 174:	ef e5       	ldi	r30, 0x5F	; 95
+ 176:	f0 e0       	ldi	r31, 0x00	; 0
+ 178:	80 81       	ld	r24, Z
+ 17a:	80 68       	ori	r24, 0x80	; 128
+ 17c:	8c 93       	st	X, r24
+
+	Timer1_CTC_Square_Wave_Init();
+ 17e:	0e 94 86 00 	call	0x10c	; 0x10c <Timer1_CTC_Square_Wave_Init>
+ 182:	ff cf       	rjmp	.-2      	; 0x182 <main+0x36>
+
+00000184 <_exit>:
+ 184:	f8 94       	cli
+
+00000186 <__stop_program>:
+ 186:	ff cf       	rjmp	.-2      	; 0x186 <__stop_program>

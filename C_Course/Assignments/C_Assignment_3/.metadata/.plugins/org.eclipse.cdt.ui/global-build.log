@@ -1,4 +1,0 @@
-03:21:41 **** Rebuild of configuration Debug for project q24 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\q24.o" "..\\src\\q24.c" 
-gcc -o q24.exe "src\\q24.o" 

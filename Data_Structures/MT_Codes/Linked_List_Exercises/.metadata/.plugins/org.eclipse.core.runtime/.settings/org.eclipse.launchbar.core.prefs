@@ -1,7 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Dynamic_Allocation_Example.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise1_Insert_Node_At_First.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise2_Insert_Node_At_Last.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise3_Find_Linked_List_Size.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise4_Search_For_Item_Inside_List.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise5_Update_Item_Inside_List.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise6_Delete_Node_From_List.exe
-eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:Dynamic_Allocation_Example.exe/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:Dynamic_Allocation_Example.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

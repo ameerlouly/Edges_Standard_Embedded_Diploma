@@ -1,0 +1,251 @@
+09:41:26 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../Exercise2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Exercise2.d" -MT"Exercise2.o" -c -o "Exercise2.o" "../Exercise2.c"
+In file included from ../Exercise2.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Exercise2.c: In function '__vector_2':
+../Exercise2.c:18: error: expected expression before '/' token
+../Exercise2.c:17: warning: unused variable 'Loop_idx'
+../Exercise2.c: In function 'main':
+../Exercise2.c:40: warning: unused variable 'Loop_idx'
+make: *** [Exercise2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:41:34 **** Build of configuration Debug for project Challenge ****
+make all 
+Building file: ../Challenge.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Challenge.d" -MT"Challenge.o" -c -o "Challenge.o" "../Challenge.c"
+Finished building: ../Challenge.c
+ 
+Building target: Challenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge.map -mmcu=atmega32 -o "Challenge.elf"  ./Challenge.o   
+Finished building target: Challenge.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge.elf  >"Challenge.lss"
+Finished building: Challenge.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     356 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:41:35 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     296 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:41:35 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../Exercise2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Exercise2.d" -MT"Exercise2.o" -c -o "Exercise2.o" "../Exercise2.c"
+In file included from ../Exercise2.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Exercise2.c: In function 'main':
+../Exercise2.c:40: warning: unused variable 'Loop_idx'
+Finished building: ../Exercise2.c
+ 
+Building target: Exercise2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise2.map -mmcu=atmega32 -o "Exercise2.elf"  ./Exercise2.o   
+Finished building target: Exercise2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise2.elf  >"Exercise2.lss"
+Finished building: Exercise2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Exercise2.elf  "Exercise2.hex"
+Finished building: Exercise2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4472 bytes (13.6% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:54:28 **** Build of configuration Debug for project Challenge ****
+make all 
+Building file: ../Challenge.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Challenge.d" -MT"Challenge.o" -c -o "Challenge.o" "../Challenge.c"
+Finished building: ../Challenge.c
+ 
+Building target: Challenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge.map -mmcu=atmega32 -o "Challenge.elf"  ./Challenge.o   
+Finished building target: Challenge.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge.elf  >"Challenge.lss"
+Finished building: Challenge.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     356 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:54:30 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     296 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:54:30 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../Exercise2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Exercise2.d" -MT"Exercise2.o" -c -o "Exercise2.o" "../Exercise2.c"
+In file included from ../Exercise2.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Exercise2.c
+ 
+Building target: Exercise2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise2.map -mmcu=atmega32 -o "Exercise2.elf"  ./Exercise2.o   
+Finished building target: Exercise2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise2.elf  >"Exercise2.lss"
+Finished building: Exercise2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Exercise2.elf  "Exercise2.hex"
+Finished building: Exercise2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4516 bytes (13.8% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:15 **** Incremental Build of configuration Debug for project Challenge ****
+make all 
+Building file: ../Challenge.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Challenge.d" -MT"Challenge.o" -c -o "Challenge.o" "../Challenge.c"
+Finished building: ../Challenge.c
+ 
+Building target: Challenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge.map -mmcu=atmega32 -o "Challenge.elf"  ./Challenge.o   
+Finished building target: Challenge.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge.elf  >"Challenge.lss"
+Finished building: Challenge.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     356 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:16 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     296 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:16 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4516 bytes (13.8% Full)
+(.text + .data + .bootloader)
+
+Data:          9 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -23,4 +23,4 @@ This section will be updated throughout the diploma every time a new course is t
 2. C Programming
 3. Data Structure
 4. Embedded C
-5. Interfacing with AVR 1
+5. Micro-Controller Interfacing I

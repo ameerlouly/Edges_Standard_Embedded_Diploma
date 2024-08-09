@@ -1,0 +1,34 @@
+00:20:56 **** Incremental Build of configuration Debug for project test ****
+make all 
+Building file: ../Exercise1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Exercise1.d" -MT"Exercise1.o" -c -o "Exercise1.o" "../Exercise1.c"
+Finished building: ../Exercise1.c
+ 
+Building target: test.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,test.map -mmcu=atmega32 -o "test.elf"  ./Exercise1.o   
+Finished building target: test.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S test.elf  >"test.lss"
+Finished building: test.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 test.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     284 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:20:56 Build Finished. 0 errors, 0 warnings. (took 343ms)
+

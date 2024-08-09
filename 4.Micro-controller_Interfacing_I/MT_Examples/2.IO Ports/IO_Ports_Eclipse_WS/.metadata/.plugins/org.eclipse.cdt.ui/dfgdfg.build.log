@@ -1,0 +1,33 @@
+17:21:02 **** Incremental Build of configuration Debug for project dfgdfg ****
+make all 
+Building target: dfgdfg.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,dfgdfg.map -mmcu=atmega32 -o "dfgdfg.elf"  ./Exercise1.o   
+Finished building target: dfgdfg.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S dfgdfg.elf  >"dfgdfg.lss"
+Finished building: dfgdfg.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex dfgdfg.elf  "dfgdfg.hex"
+Finished building: dfgdfg.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 dfgdfg.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     212 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:21:02 Build Finished. 0 errors, 0 warnings. (took 562ms)
+

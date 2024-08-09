@@ -1,0 +1,936 @@
+
+Challenge1_Eta32mini.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000061c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000002  00800060  00800060  00000690  2**0
+                  ALLOC
+  2 .stab         0000078c  00000000  00000000  00000690  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000722  00000000  00000000  00000e1c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 90 02 	jmp	0x520	; 0x520 <__vector_11>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a2 36       	cpi	r26, 0x62	; 98
+  6c:	b1 07       	cpc	r27, r17
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 e5 02 	call	0x5ca	; 0x5ca <main>
+  74:	0c 94 0c 03 	jmp	0x618	; 0x618 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <Eta32mini_SevenSegment_Display>:
+ * E --> PA5
+ * F --> PA6
+ * G --> PA7
+ */
+void Eta32mini_SevenSegment_Display(unsigned char value)
+{
+  7c:	df 93       	push	r29
+  7e:	cf 93       	push	r28
+  80:	00 d0       	rcall	.+0      	; 0x82 <Eta32mini_SevenSegment_Display+0x6>
+  82:	0f 92       	push	r0
+  84:	cd b7       	in	r28, 0x3d	; 61
+  86:	de b7       	in	r29, 0x3e	; 62
+  88:	89 83       	std	Y+1, r24	; 0x01
+	switch(value)
+  8a:	89 81       	ldd	r24, Y+1	; 0x01
+  8c:	28 2f       	mov	r18, r24
+  8e:	30 e0       	ldi	r19, 0x00	; 0
+  90:	3b 83       	std	Y+3, r19	; 0x03
+  92:	2a 83       	std	Y+2, r18	; 0x02
+  94:	8a 81       	ldd	r24, Y+2	; 0x02
+  96:	9b 81       	ldd	r25, Y+3	; 0x03
+  98:	84 30       	cpi	r24, 0x04	; 4
+  9a:	91 05       	cpc	r25, r1
+  9c:	09 f4       	brne	.+2      	; 0xa0 <Eta32mini_SevenSegment_Display+0x24>
+  9e:	0f c1       	rjmp	.+542    	; 0x2be <Eta32mini_SevenSegment_Display+0x242>
+  a0:	2a 81       	ldd	r18, Y+2	; 0x02
+  a2:	3b 81       	ldd	r19, Y+3	; 0x03
+  a4:	25 30       	cpi	r18, 0x05	; 5
+  a6:	31 05       	cpc	r19, r1
+  a8:	ec f4       	brge	.+58     	; 0xe4 <Eta32mini_SevenSegment_Display+0x68>
+  aa:	8a 81       	ldd	r24, Y+2	; 0x02
+  ac:	9b 81       	ldd	r25, Y+3	; 0x03
+  ae:	81 30       	cpi	r24, 0x01	; 1
+  b0:	91 05       	cpc	r25, r1
+  b2:	09 f4       	brne	.+2      	; 0xb6 <Eta32mini_SevenSegment_Display+0x3a>
+  b4:	6e c0       	rjmp	.+220    	; 0x192 <Eta32mini_SevenSegment_Display+0x116>
+  b6:	2a 81       	ldd	r18, Y+2	; 0x02
+  b8:	3b 81       	ldd	r19, Y+3	; 0x03
+  ba:	22 30       	cpi	r18, 0x02	; 2
+  bc:	31 05       	cpc	r19, r1
+  be:	2c f4       	brge	.+10     	; 0xca <Eta32mini_SevenSegment_Display+0x4e>
+  c0:	8a 81       	ldd	r24, Y+2	; 0x02
+  c2:	9b 81       	ldd	r25, Y+3	; 0x03
+  c4:	00 97       	sbiw	r24, 0x00	; 0
+  c6:	99 f1       	breq	.+102    	; 0x12e <Eta32mini_SevenSegment_Display+0xb2>
+  c8:	25 c2       	rjmp	.+1098   	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+  ca:	2a 81       	ldd	r18, Y+2	; 0x02
+  cc:	3b 81       	ldd	r19, Y+3	; 0x03
+  ce:	22 30       	cpi	r18, 0x02	; 2
+  d0:	31 05       	cpc	r19, r1
+  d2:	09 f4       	brne	.+2      	; 0xd6 <Eta32mini_SevenSegment_Display+0x5a>
+  d4:	90 c0       	rjmp	.+288    	; 0x1f6 <Eta32mini_SevenSegment_Display+0x17a>
+  d6:	8a 81       	ldd	r24, Y+2	; 0x02
+  d8:	9b 81       	ldd	r25, Y+3	; 0x03
+  da:	83 30       	cpi	r24, 0x03	; 3
+  dc:	91 05       	cpc	r25, r1
+  de:	09 f4       	brne	.+2      	; 0xe2 <Eta32mini_SevenSegment_Display+0x66>
+  e0:	bc c0       	rjmp	.+376    	; 0x25a <Eta32mini_SevenSegment_Display+0x1de>
+  e2:	18 c2       	rjmp	.+1072   	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+  e4:	2a 81       	ldd	r18, Y+2	; 0x02
+  e6:	3b 81       	ldd	r19, Y+3	; 0x03
+  e8:	27 30       	cpi	r18, 0x07	; 7
+  ea:	31 05       	cpc	r19, r1
+  ec:	09 f4       	brne	.+2      	; 0xf0 <Eta32mini_SevenSegment_Display+0x74>
+  ee:	7d c1       	rjmp	.+762    	; 0x3ea <Eta32mini_SevenSegment_Display+0x36e>
+  f0:	8a 81       	ldd	r24, Y+2	; 0x02
+  f2:	9b 81       	ldd	r25, Y+3	; 0x03
+  f4:	88 30       	cpi	r24, 0x08	; 8
+  f6:	91 05       	cpc	r25, r1
+  f8:	6c f4       	brge	.+26     	; 0x114 <Eta32mini_SevenSegment_Display+0x98>
+  fa:	2a 81       	ldd	r18, Y+2	; 0x02
+  fc:	3b 81       	ldd	r19, Y+3	; 0x03
+  fe:	25 30       	cpi	r18, 0x05	; 5
+ 100:	31 05       	cpc	r19, r1
+ 102:	09 f4       	brne	.+2      	; 0x106 <Eta32mini_SevenSegment_Display+0x8a>
+ 104:	0e c1       	rjmp	.+540    	; 0x322 <Eta32mini_SevenSegment_Display+0x2a6>
+ 106:	8a 81       	ldd	r24, Y+2	; 0x02
+ 108:	9b 81       	ldd	r25, Y+3	; 0x03
+ 10a:	86 30       	cpi	r24, 0x06	; 6
+ 10c:	91 05       	cpc	r25, r1
+ 10e:	09 f4       	brne	.+2      	; 0x112 <Eta32mini_SevenSegment_Display+0x96>
+ 110:	3a c1       	rjmp	.+628    	; 0x386 <Eta32mini_SevenSegment_Display+0x30a>
+ 112:	00 c2       	rjmp	.+1024   	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+ 114:	2a 81       	ldd	r18, Y+2	; 0x02
+ 116:	3b 81       	ldd	r19, Y+3	; 0x03
+ 118:	28 30       	cpi	r18, 0x08	; 8
+ 11a:	31 05       	cpc	r19, r1
+ 11c:	09 f4       	brne	.+2      	; 0x120 <Eta32mini_SevenSegment_Display+0xa4>
+ 11e:	97 c1       	rjmp	.+814    	; 0x44e <Eta32mini_SevenSegment_Display+0x3d2>
+ 120:	8a 81       	ldd	r24, Y+2	; 0x02
+ 122:	9b 81       	ldd	r25, Y+3	; 0x03
+ 124:	89 30       	cpi	r24, 0x09	; 9
+ 126:	91 05       	cpc	r25, r1
+ 128:	09 f4       	brne	.+2      	; 0x12c <Eta32mini_SevenSegment_Display+0xb0>
+ 12a:	c3 c1       	rjmp	.+902    	; 0x4b2 <Eta32mini_SevenSegment_Display+0x436>
+ 12c:	f3 c1       	rjmp	.+998    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+	{
+	case 0:
+		PORTA |= (1<<1);
+ 12e:	ab e3       	ldi	r26, 0x3B	; 59
+ 130:	b0 e0       	ldi	r27, 0x00	; 0
+ 132:	eb e3       	ldi	r30, 0x3B	; 59
+ 134:	f0 e0       	ldi	r31, 0x00	; 0
+ 136:	80 81       	ld	r24, Z
+ 138:	82 60       	ori	r24, 0x02	; 2
+ 13a:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 13c:	ab e3       	ldi	r26, 0x3B	; 59
+ 13e:	b0 e0       	ldi	r27, 0x00	; 0
+ 140:	eb e3       	ldi	r30, 0x3B	; 59
+ 142:	f0 e0       	ldi	r31, 0x00	; 0
+ 144:	80 81       	ld	r24, Z
+ 146:	84 60       	ori	r24, 0x04	; 4
+ 148:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 14a:	ab e3       	ldi	r26, 0x3B	; 59
+ 14c:	b0 e0       	ldi	r27, 0x00	; 0
+ 14e:	eb e3       	ldi	r30, 0x3B	; 59
+ 150:	f0 e0       	ldi	r31, 0x00	; 0
+ 152:	80 81       	ld	r24, Z
+ 154:	88 60       	ori	r24, 0x08	; 8
+ 156:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 158:	ab e3       	ldi	r26, 0x3B	; 59
+ 15a:	b0 e0       	ldi	r27, 0x00	; 0
+ 15c:	eb e3       	ldi	r30, 0x3B	; 59
+ 15e:	f0 e0       	ldi	r31, 0x00	; 0
+ 160:	80 81       	ld	r24, Z
+ 162:	80 61       	ori	r24, 0x10	; 16
+ 164:	8c 93       	st	X, r24
+		PORTA |= (1<<5);
+ 166:	ab e3       	ldi	r26, 0x3B	; 59
+ 168:	b0 e0       	ldi	r27, 0x00	; 0
+ 16a:	eb e3       	ldi	r30, 0x3B	; 59
+ 16c:	f0 e0       	ldi	r31, 0x00	; 0
+ 16e:	80 81       	ld	r24, Z
+ 170:	80 62       	ori	r24, 0x20	; 32
+ 172:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 174:	ab e3       	ldi	r26, 0x3B	; 59
+ 176:	b0 e0       	ldi	r27, 0x00	; 0
+ 178:	eb e3       	ldi	r30, 0x3B	; 59
+ 17a:	f0 e0       	ldi	r31, 0x00	; 0
+ 17c:	80 81       	ld	r24, Z
+ 17e:	80 64       	ori	r24, 0x40	; 64
+ 180:	8c 93       	st	X, r24
+		PORTA &= ~(1<<7);
+ 182:	ab e3       	ldi	r26, 0x3B	; 59
+ 184:	b0 e0       	ldi	r27, 0x00	; 0
+ 186:	eb e3       	ldi	r30, 0x3B	; 59
+ 188:	f0 e0       	ldi	r31, 0x00	; 0
+ 18a:	80 81       	ld	r24, Z
+ 18c:	8f 77       	andi	r24, 0x7F	; 127
+ 18e:	8c 93       	st	X, r24
+ 190:	c1 c1       	rjmp	.+898    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 1:
+		PORTA &= ~(1<<1);
+ 192:	ab e3       	ldi	r26, 0x3B	; 59
+ 194:	b0 e0       	ldi	r27, 0x00	; 0
+ 196:	eb e3       	ldi	r30, 0x3B	; 59
+ 198:	f0 e0       	ldi	r31, 0x00	; 0
+ 19a:	80 81       	ld	r24, Z
+ 19c:	8d 7f       	andi	r24, 0xFD	; 253
+ 19e:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 1a0:	ab e3       	ldi	r26, 0x3B	; 59
+ 1a2:	b0 e0       	ldi	r27, 0x00	; 0
+ 1a4:	eb e3       	ldi	r30, 0x3B	; 59
+ 1a6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1a8:	80 81       	ld	r24, Z
+ 1aa:	84 60       	ori	r24, 0x04	; 4
+ 1ac:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 1ae:	ab e3       	ldi	r26, 0x3B	; 59
+ 1b0:	b0 e0       	ldi	r27, 0x00	; 0
+ 1b2:	eb e3       	ldi	r30, 0x3B	; 59
+ 1b4:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b6:	80 81       	ld	r24, Z
+ 1b8:	88 60       	ori	r24, 0x08	; 8
+ 1ba:	8c 93       	st	X, r24
+		PORTA &= ~(1<<4);
+ 1bc:	ab e3       	ldi	r26, 0x3B	; 59
+ 1be:	b0 e0       	ldi	r27, 0x00	; 0
+ 1c0:	eb e3       	ldi	r30, 0x3B	; 59
+ 1c2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1c4:	80 81       	ld	r24, Z
+ 1c6:	8f 7e       	andi	r24, 0xEF	; 239
+ 1c8:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 1ca:	ab e3       	ldi	r26, 0x3B	; 59
+ 1cc:	b0 e0       	ldi	r27, 0x00	; 0
+ 1ce:	eb e3       	ldi	r30, 0x3B	; 59
+ 1d0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d2:	80 81       	ld	r24, Z
+ 1d4:	8f 7d       	andi	r24, 0xDF	; 223
+ 1d6:	8c 93       	st	X, r24
+		PORTA &= ~(1<<6);
+ 1d8:	ab e3       	ldi	r26, 0x3B	; 59
+ 1da:	b0 e0       	ldi	r27, 0x00	; 0
+ 1dc:	eb e3       	ldi	r30, 0x3B	; 59
+ 1de:	f0 e0       	ldi	r31, 0x00	; 0
+ 1e0:	80 81       	ld	r24, Z
+ 1e2:	8f 7b       	andi	r24, 0xBF	; 191
+ 1e4:	8c 93       	st	X, r24
+		PORTA &= ~(1<<7);
+ 1e6:	ab e3       	ldi	r26, 0x3B	; 59
+ 1e8:	b0 e0       	ldi	r27, 0x00	; 0
+ 1ea:	eb e3       	ldi	r30, 0x3B	; 59
+ 1ec:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ee:	80 81       	ld	r24, Z
+ 1f0:	8f 77       	andi	r24, 0x7F	; 127
+ 1f2:	8c 93       	st	X, r24
+ 1f4:	8f c1       	rjmp	.+798    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 2:
+		PORTA |= (1<<1);
+ 1f6:	ab e3       	ldi	r26, 0x3B	; 59
+ 1f8:	b0 e0       	ldi	r27, 0x00	; 0
+ 1fa:	eb e3       	ldi	r30, 0x3B	; 59
+ 1fc:	f0 e0       	ldi	r31, 0x00	; 0
+ 1fe:	80 81       	ld	r24, Z
+ 200:	82 60       	ori	r24, 0x02	; 2
+ 202:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 204:	ab e3       	ldi	r26, 0x3B	; 59
+ 206:	b0 e0       	ldi	r27, 0x00	; 0
+ 208:	eb e3       	ldi	r30, 0x3B	; 59
+ 20a:	f0 e0       	ldi	r31, 0x00	; 0
+ 20c:	80 81       	ld	r24, Z
+ 20e:	84 60       	ori	r24, 0x04	; 4
+ 210:	8c 93       	st	X, r24
+		PORTA &= ~(1<<3);
+ 212:	ab e3       	ldi	r26, 0x3B	; 59
+ 214:	b0 e0       	ldi	r27, 0x00	; 0
+ 216:	eb e3       	ldi	r30, 0x3B	; 59
+ 218:	f0 e0       	ldi	r31, 0x00	; 0
+ 21a:	80 81       	ld	r24, Z
+ 21c:	87 7f       	andi	r24, 0xF7	; 247
+ 21e:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 220:	ab e3       	ldi	r26, 0x3B	; 59
+ 222:	b0 e0       	ldi	r27, 0x00	; 0
+ 224:	eb e3       	ldi	r30, 0x3B	; 59
+ 226:	f0 e0       	ldi	r31, 0x00	; 0
+ 228:	80 81       	ld	r24, Z
+ 22a:	80 61       	ori	r24, 0x10	; 16
+ 22c:	8c 93       	st	X, r24
+		PORTA |= (1<<5);
+ 22e:	ab e3       	ldi	r26, 0x3B	; 59
+ 230:	b0 e0       	ldi	r27, 0x00	; 0
+ 232:	eb e3       	ldi	r30, 0x3B	; 59
+ 234:	f0 e0       	ldi	r31, 0x00	; 0
+ 236:	80 81       	ld	r24, Z
+ 238:	80 62       	ori	r24, 0x20	; 32
+ 23a:	8c 93       	st	X, r24
+		PORTA &= ~(1<<6);
+ 23c:	ab e3       	ldi	r26, 0x3B	; 59
+ 23e:	b0 e0       	ldi	r27, 0x00	; 0
+ 240:	eb e3       	ldi	r30, 0x3B	; 59
+ 242:	f0 e0       	ldi	r31, 0x00	; 0
+ 244:	80 81       	ld	r24, Z
+ 246:	8f 7b       	andi	r24, 0xBF	; 191
+ 248:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 24a:	ab e3       	ldi	r26, 0x3B	; 59
+ 24c:	b0 e0       	ldi	r27, 0x00	; 0
+ 24e:	eb e3       	ldi	r30, 0x3B	; 59
+ 250:	f0 e0       	ldi	r31, 0x00	; 0
+ 252:	80 81       	ld	r24, Z
+ 254:	80 68       	ori	r24, 0x80	; 128
+ 256:	8c 93       	st	X, r24
+ 258:	5d c1       	rjmp	.+698    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 3:
+		PORTA |= (1<<1);
+ 25a:	ab e3       	ldi	r26, 0x3B	; 59
+ 25c:	b0 e0       	ldi	r27, 0x00	; 0
+ 25e:	eb e3       	ldi	r30, 0x3B	; 59
+ 260:	f0 e0       	ldi	r31, 0x00	; 0
+ 262:	80 81       	ld	r24, Z
+ 264:	82 60       	ori	r24, 0x02	; 2
+ 266:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 268:	ab e3       	ldi	r26, 0x3B	; 59
+ 26a:	b0 e0       	ldi	r27, 0x00	; 0
+ 26c:	eb e3       	ldi	r30, 0x3B	; 59
+ 26e:	f0 e0       	ldi	r31, 0x00	; 0
+ 270:	80 81       	ld	r24, Z
+ 272:	84 60       	ori	r24, 0x04	; 4
+ 274:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 276:	ab e3       	ldi	r26, 0x3B	; 59
+ 278:	b0 e0       	ldi	r27, 0x00	; 0
+ 27a:	eb e3       	ldi	r30, 0x3B	; 59
+ 27c:	f0 e0       	ldi	r31, 0x00	; 0
+ 27e:	80 81       	ld	r24, Z
+ 280:	88 60       	ori	r24, 0x08	; 8
+ 282:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 284:	ab e3       	ldi	r26, 0x3B	; 59
+ 286:	b0 e0       	ldi	r27, 0x00	; 0
+ 288:	eb e3       	ldi	r30, 0x3B	; 59
+ 28a:	f0 e0       	ldi	r31, 0x00	; 0
+ 28c:	80 81       	ld	r24, Z
+ 28e:	80 61       	ori	r24, 0x10	; 16
+ 290:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 292:	ab e3       	ldi	r26, 0x3B	; 59
+ 294:	b0 e0       	ldi	r27, 0x00	; 0
+ 296:	eb e3       	ldi	r30, 0x3B	; 59
+ 298:	f0 e0       	ldi	r31, 0x00	; 0
+ 29a:	80 81       	ld	r24, Z
+ 29c:	8f 7d       	andi	r24, 0xDF	; 223
+ 29e:	8c 93       	st	X, r24
+		PORTA &= ~(1<<6);
+ 2a0:	ab e3       	ldi	r26, 0x3B	; 59
+ 2a2:	b0 e0       	ldi	r27, 0x00	; 0
+ 2a4:	eb e3       	ldi	r30, 0x3B	; 59
+ 2a6:	f0 e0       	ldi	r31, 0x00	; 0
+ 2a8:	80 81       	ld	r24, Z
+ 2aa:	8f 7b       	andi	r24, 0xBF	; 191
+ 2ac:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 2ae:	ab e3       	ldi	r26, 0x3B	; 59
+ 2b0:	b0 e0       	ldi	r27, 0x00	; 0
+ 2b2:	eb e3       	ldi	r30, 0x3B	; 59
+ 2b4:	f0 e0       	ldi	r31, 0x00	; 0
+ 2b6:	80 81       	ld	r24, Z
+ 2b8:	80 68       	ori	r24, 0x80	; 128
+ 2ba:	8c 93       	st	X, r24
+ 2bc:	2b c1       	rjmp	.+598    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 4:
+		PORTA &= ~(1<<1);
+ 2be:	ab e3       	ldi	r26, 0x3B	; 59
+ 2c0:	b0 e0       	ldi	r27, 0x00	; 0
+ 2c2:	eb e3       	ldi	r30, 0x3B	; 59
+ 2c4:	f0 e0       	ldi	r31, 0x00	; 0
+ 2c6:	80 81       	ld	r24, Z
+ 2c8:	8d 7f       	andi	r24, 0xFD	; 253
+ 2ca:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 2cc:	ab e3       	ldi	r26, 0x3B	; 59
+ 2ce:	b0 e0       	ldi	r27, 0x00	; 0
+ 2d0:	eb e3       	ldi	r30, 0x3B	; 59
+ 2d2:	f0 e0       	ldi	r31, 0x00	; 0
+ 2d4:	80 81       	ld	r24, Z
+ 2d6:	84 60       	ori	r24, 0x04	; 4
+ 2d8:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 2da:	ab e3       	ldi	r26, 0x3B	; 59
+ 2dc:	b0 e0       	ldi	r27, 0x00	; 0
+ 2de:	eb e3       	ldi	r30, 0x3B	; 59
+ 2e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 2e2:	80 81       	ld	r24, Z
+ 2e4:	88 60       	ori	r24, 0x08	; 8
+ 2e6:	8c 93       	st	X, r24
+		PORTA &= ~(1<<4);
+ 2e8:	ab e3       	ldi	r26, 0x3B	; 59
+ 2ea:	b0 e0       	ldi	r27, 0x00	; 0
+ 2ec:	eb e3       	ldi	r30, 0x3B	; 59
+ 2ee:	f0 e0       	ldi	r31, 0x00	; 0
+ 2f0:	80 81       	ld	r24, Z
+ 2f2:	8f 7e       	andi	r24, 0xEF	; 239
+ 2f4:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 2f6:	ab e3       	ldi	r26, 0x3B	; 59
+ 2f8:	b0 e0       	ldi	r27, 0x00	; 0
+ 2fa:	eb e3       	ldi	r30, 0x3B	; 59
+ 2fc:	f0 e0       	ldi	r31, 0x00	; 0
+ 2fe:	80 81       	ld	r24, Z
+ 300:	8f 7d       	andi	r24, 0xDF	; 223
+ 302:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 304:	ab e3       	ldi	r26, 0x3B	; 59
+ 306:	b0 e0       	ldi	r27, 0x00	; 0
+ 308:	eb e3       	ldi	r30, 0x3B	; 59
+ 30a:	f0 e0       	ldi	r31, 0x00	; 0
+ 30c:	80 81       	ld	r24, Z
+ 30e:	80 64       	ori	r24, 0x40	; 64
+ 310:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 312:	ab e3       	ldi	r26, 0x3B	; 59
+ 314:	b0 e0       	ldi	r27, 0x00	; 0
+ 316:	eb e3       	ldi	r30, 0x3B	; 59
+ 318:	f0 e0       	ldi	r31, 0x00	; 0
+ 31a:	80 81       	ld	r24, Z
+ 31c:	80 68       	ori	r24, 0x80	; 128
+ 31e:	8c 93       	st	X, r24
+ 320:	f9 c0       	rjmp	.+498    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 5:
+		PORTA |= (1<<1);
+ 322:	ab e3       	ldi	r26, 0x3B	; 59
+ 324:	b0 e0       	ldi	r27, 0x00	; 0
+ 326:	eb e3       	ldi	r30, 0x3B	; 59
+ 328:	f0 e0       	ldi	r31, 0x00	; 0
+ 32a:	80 81       	ld	r24, Z
+ 32c:	82 60       	ori	r24, 0x02	; 2
+ 32e:	8c 93       	st	X, r24
+		PORTA &= ~(1<<2);
+ 330:	ab e3       	ldi	r26, 0x3B	; 59
+ 332:	b0 e0       	ldi	r27, 0x00	; 0
+ 334:	eb e3       	ldi	r30, 0x3B	; 59
+ 336:	f0 e0       	ldi	r31, 0x00	; 0
+ 338:	80 81       	ld	r24, Z
+ 33a:	8b 7f       	andi	r24, 0xFB	; 251
+ 33c:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 33e:	ab e3       	ldi	r26, 0x3B	; 59
+ 340:	b0 e0       	ldi	r27, 0x00	; 0
+ 342:	eb e3       	ldi	r30, 0x3B	; 59
+ 344:	f0 e0       	ldi	r31, 0x00	; 0
+ 346:	80 81       	ld	r24, Z
+ 348:	88 60       	ori	r24, 0x08	; 8
+ 34a:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 34c:	ab e3       	ldi	r26, 0x3B	; 59
+ 34e:	b0 e0       	ldi	r27, 0x00	; 0
+ 350:	eb e3       	ldi	r30, 0x3B	; 59
+ 352:	f0 e0       	ldi	r31, 0x00	; 0
+ 354:	80 81       	ld	r24, Z
+ 356:	80 61       	ori	r24, 0x10	; 16
+ 358:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 35a:	ab e3       	ldi	r26, 0x3B	; 59
+ 35c:	b0 e0       	ldi	r27, 0x00	; 0
+ 35e:	eb e3       	ldi	r30, 0x3B	; 59
+ 360:	f0 e0       	ldi	r31, 0x00	; 0
+ 362:	80 81       	ld	r24, Z
+ 364:	8f 7d       	andi	r24, 0xDF	; 223
+ 366:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 368:	ab e3       	ldi	r26, 0x3B	; 59
+ 36a:	b0 e0       	ldi	r27, 0x00	; 0
+ 36c:	eb e3       	ldi	r30, 0x3B	; 59
+ 36e:	f0 e0       	ldi	r31, 0x00	; 0
+ 370:	80 81       	ld	r24, Z
+ 372:	80 64       	ori	r24, 0x40	; 64
+ 374:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 376:	ab e3       	ldi	r26, 0x3B	; 59
+ 378:	b0 e0       	ldi	r27, 0x00	; 0
+ 37a:	eb e3       	ldi	r30, 0x3B	; 59
+ 37c:	f0 e0       	ldi	r31, 0x00	; 0
+ 37e:	80 81       	ld	r24, Z
+ 380:	80 68       	ori	r24, 0x80	; 128
+ 382:	8c 93       	st	X, r24
+ 384:	c7 c0       	rjmp	.+398    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 6:
+		PORTA |= (1<<1);
+ 386:	ab e3       	ldi	r26, 0x3B	; 59
+ 388:	b0 e0       	ldi	r27, 0x00	; 0
+ 38a:	eb e3       	ldi	r30, 0x3B	; 59
+ 38c:	f0 e0       	ldi	r31, 0x00	; 0
+ 38e:	80 81       	ld	r24, Z
+ 390:	82 60       	ori	r24, 0x02	; 2
+ 392:	8c 93       	st	X, r24
+		PORTA &= ~(1<<2);
+ 394:	ab e3       	ldi	r26, 0x3B	; 59
+ 396:	b0 e0       	ldi	r27, 0x00	; 0
+ 398:	eb e3       	ldi	r30, 0x3B	; 59
+ 39a:	f0 e0       	ldi	r31, 0x00	; 0
+ 39c:	80 81       	ld	r24, Z
+ 39e:	8b 7f       	andi	r24, 0xFB	; 251
+ 3a0:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 3a2:	ab e3       	ldi	r26, 0x3B	; 59
+ 3a4:	b0 e0       	ldi	r27, 0x00	; 0
+ 3a6:	eb e3       	ldi	r30, 0x3B	; 59
+ 3a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 3aa:	80 81       	ld	r24, Z
+ 3ac:	88 60       	ori	r24, 0x08	; 8
+ 3ae:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 3b0:	ab e3       	ldi	r26, 0x3B	; 59
+ 3b2:	b0 e0       	ldi	r27, 0x00	; 0
+ 3b4:	eb e3       	ldi	r30, 0x3B	; 59
+ 3b6:	f0 e0       	ldi	r31, 0x00	; 0
+ 3b8:	80 81       	ld	r24, Z
+ 3ba:	80 61       	ori	r24, 0x10	; 16
+ 3bc:	8c 93       	st	X, r24
+		PORTA |= (1<<5);
+ 3be:	ab e3       	ldi	r26, 0x3B	; 59
+ 3c0:	b0 e0       	ldi	r27, 0x00	; 0
+ 3c2:	eb e3       	ldi	r30, 0x3B	; 59
+ 3c4:	f0 e0       	ldi	r31, 0x00	; 0
+ 3c6:	80 81       	ld	r24, Z
+ 3c8:	80 62       	ori	r24, 0x20	; 32
+ 3ca:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 3cc:	ab e3       	ldi	r26, 0x3B	; 59
+ 3ce:	b0 e0       	ldi	r27, 0x00	; 0
+ 3d0:	eb e3       	ldi	r30, 0x3B	; 59
+ 3d2:	f0 e0       	ldi	r31, 0x00	; 0
+ 3d4:	80 81       	ld	r24, Z
+ 3d6:	80 64       	ori	r24, 0x40	; 64
+ 3d8:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 3da:	ab e3       	ldi	r26, 0x3B	; 59
+ 3dc:	b0 e0       	ldi	r27, 0x00	; 0
+ 3de:	eb e3       	ldi	r30, 0x3B	; 59
+ 3e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3e2:	80 81       	ld	r24, Z
+ 3e4:	80 68       	ori	r24, 0x80	; 128
+ 3e6:	8c 93       	st	X, r24
+ 3e8:	95 c0       	rjmp	.+298    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 7:
+		PORTA |= (1<<1);
+ 3ea:	ab e3       	ldi	r26, 0x3B	; 59
+ 3ec:	b0 e0       	ldi	r27, 0x00	; 0
+ 3ee:	eb e3       	ldi	r30, 0x3B	; 59
+ 3f0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3f2:	80 81       	ld	r24, Z
+ 3f4:	82 60       	ori	r24, 0x02	; 2
+ 3f6:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 3f8:	ab e3       	ldi	r26, 0x3B	; 59
+ 3fa:	b0 e0       	ldi	r27, 0x00	; 0
+ 3fc:	eb e3       	ldi	r30, 0x3B	; 59
+ 3fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 400:	80 81       	ld	r24, Z
+ 402:	84 60       	ori	r24, 0x04	; 4
+ 404:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 406:	ab e3       	ldi	r26, 0x3B	; 59
+ 408:	b0 e0       	ldi	r27, 0x00	; 0
+ 40a:	eb e3       	ldi	r30, 0x3B	; 59
+ 40c:	f0 e0       	ldi	r31, 0x00	; 0
+ 40e:	80 81       	ld	r24, Z
+ 410:	88 60       	ori	r24, 0x08	; 8
+ 412:	8c 93       	st	X, r24
+		PORTA &= ~(1<<4);
+ 414:	ab e3       	ldi	r26, 0x3B	; 59
+ 416:	b0 e0       	ldi	r27, 0x00	; 0
+ 418:	eb e3       	ldi	r30, 0x3B	; 59
+ 41a:	f0 e0       	ldi	r31, 0x00	; 0
+ 41c:	80 81       	ld	r24, Z
+ 41e:	8f 7e       	andi	r24, 0xEF	; 239
+ 420:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 422:	ab e3       	ldi	r26, 0x3B	; 59
+ 424:	b0 e0       	ldi	r27, 0x00	; 0
+ 426:	eb e3       	ldi	r30, 0x3B	; 59
+ 428:	f0 e0       	ldi	r31, 0x00	; 0
+ 42a:	80 81       	ld	r24, Z
+ 42c:	8f 7d       	andi	r24, 0xDF	; 223
+ 42e:	8c 93       	st	X, r24
+		PORTA &= ~(1<<6);
+ 430:	ab e3       	ldi	r26, 0x3B	; 59
+ 432:	b0 e0       	ldi	r27, 0x00	; 0
+ 434:	eb e3       	ldi	r30, 0x3B	; 59
+ 436:	f0 e0       	ldi	r31, 0x00	; 0
+ 438:	80 81       	ld	r24, Z
+ 43a:	8f 7b       	andi	r24, 0xBF	; 191
+ 43c:	8c 93       	st	X, r24
+		PORTA &= ~(1<<7);
+ 43e:	ab e3       	ldi	r26, 0x3B	; 59
+ 440:	b0 e0       	ldi	r27, 0x00	; 0
+ 442:	eb e3       	ldi	r30, 0x3B	; 59
+ 444:	f0 e0       	ldi	r31, 0x00	; 0
+ 446:	80 81       	ld	r24, Z
+ 448:	8f 77       	andi	r24, 0x7F	; 127
+ 44a:	8c 93       	st	X, r24
+ 44c:	63 c0       	rjmp	.+198    	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 8:
+		PORTA |= (1<<1);
+ 44e:	ab e3       	ldi	r26, 0x3B	; 59
+ 450:	b0 e0       	ldi	r27, 0x00	; 0
+ 452:	eb e3       	ldi	r30, 0x3B	; 59
+ 454:	f0 e0       	ldi	r31, 0x00	; 0
+ 456:	80 81       	ld	r24, Z
+ 458:	82 60       	ori	r24, 0x02	; 2
+ 45a:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 45c:	ab e3       	ldi	r26, 0x3B	; 59
+ 45e:	b0 e0       	ldi	r27, 0x00	; 0
+ 460:	eb e3       	ldi	r30, 0x3B	; 59
+ 462:	f0 e0       	ldi	r31, 0x00	; 0
+ 464:	80 81       	ld	r24, Z
+ 466:	84 60       	ori	r24, 0x04	; 4
+ 468:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 46a:	ab e3       	ldi	r26, 0x3B	; 59
+ 46c:	b0 e0       	ldi	r27, 0x00	; 0
+ 46e:	eb e3       	ldi	r30, 0x3B	; 59
+ 470:	f0 e0       	ldi	r31, 0x00	; 0
+ 472:	80 81       	ld	r24, Z
+ 474:	88 60       	ori	r24, 0x08	; 8
+ 476:	8c 93       	st	X, r24
+		PORTA |= (1<<4);
+ 478:	ab e3       	ldi	r26, 0x3B	; 59
+ 47a:	b0 e0       	ldi	r27, 0x00	; 0
+ 47c:	eb e3       	ldi	r30, 0x3B	; 59
+ 47e:	f0 e0       	ldi	r31, 0x00	; 0
+ 480:	80 81       	ld	r24, Z
+ 482:	80 61       	ori	r24, 0x10	; 16
+ 484:	8c 93       	st	X, r24
+		PORTA |= (1<<5);
+ 486:	ab e3       	ldi	r26, 0x3B	; 59
+ 488:	b0 e0       	ldi	r27, 0x00	; 0
+ 48a:	eb e3       	ldi	r30, 0x3B	; 59
+ 48c:	f0 e0       	ldi	r31, 0x00	; 0
+ 48e:	80 81       	ld	r24, Z
+ 490:	80 62       	ori	r24, 0x20	; 32
+ 492:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 494:	ab e3       	ldi	r26, 0x3B	; 59
+ 496:	b0 e0       	ldi	r27, 0x00	; 0
+ 498:	eb e3       	ldi	r30, 0x3B	; 59
+ 49a:	f0 e0       	ldi	r31, 0x00	; 0
+ 49c:	80 81       	ld	r24, Z
+ 49e:	80 64       	ori	r24, 0x40	; 64
+ 4a0:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 4a2:	ab e3       	ldi	r26, 0x3B	; 59
+ 4a4:	b0 e0       	ldi	r27, 0x00	; 0
+ 4a6:	eb e3       	ldi	r30, 0x3B	; 59
+ 4a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 4aa:	80 81       	ld	r24, Z
+ 4ac:	80 68       	ori	r24, 0x80	; 128
+ 4ae:	8c 93       	st	X, r24
+ 4b0:	31 c0       	rjmp	.+98     	; 0x514 <Eta32mini_SevenSegment_Display+0x498>
+		break;
+	case 9:
+		PORTA |= (1<<1);
+ 4b2:	ab e3       	ldi	r26, 0x3B	; 59
+ 4b4:	b0 e0       	ldi	r27, 0x00	; 0
+ 4b6:	eb e3       	ldi	r30, 0x3B	; 59
+ 4b8:	f0 e0       	ldi	r31, 0x00	; 0
+ 4ba:	80 81       	ld	r24, Z
+ 4bc:	82 60       	ori	r24, 0x02	; 2
+ 4be:	8c 93       	st	X, r24
+		PORTA |= (1<<2);
+ 4c0:	ab e3       	ldi	r26, 0x3B	; 59
+ 4c2:	b0 e0       	ldi	r27, 0x00	; 0
+ 4c4:	eb e3       	ldi	r30, 0x3B	; 59
+ 4c6:	f0 e0       	ldi	r31, 0x00	; 0
+ 4c8:	80 81       	ld	r24, Z
+ 4ca:	84 60       	ori	r24, 0x04	; 4
+ 4cc:	8c 93       	st	X, r24
+		PORTA |= (1<<3);
+ 4ce:	ab e3       	ldi	r26, 0x3B	; 59
+ 4d0:	b0 e0       	ldi	r27, 0x00	; 0
+ 4d2:	eb e3       	ldi	r30, 0x3B	; 59
+ 4d4:	f0 e0       	ldi	r31, 0x00	; 0
+ 4d6:	80 81       	ld	r24, Z
+ 4d8:	88 60       	ori	r24, 0x08	; 8
+ 4da:	8c 93       	st	X, r24
+		PORTA &= ~(1<<4);
+ 4dc:	ab e3       	ldi	r26, 0x3B	; 59
+ 4de:	b0 e0       	ldi	r27, 0x00	; 0
+ 4e0:	eb e3       	ldi	r30, 0x3B	; 59
+ 4e2:	f0 e0       	ldi	r31, 0x00	; 0
+ 4e4:	80 81       	ld	r24, Z
+ 4e6:	8f 7e       	andi	r24, 0xEF	; 239
+ 4e8:	8c 93       	st	X, r24
+		PORTA &= ~(1<<5);
+ 4ea:	ab e3       	ldi	r26, 0x3B	; 59
+ 4ec:	b0 e0       	ldi	r27, 0x00	; 0
+ 4ee:	eb e3       	ldi	r30, 0x3B	; 59
+ 4f0:	f0 e0       	ldi	r31, 0x00	; 0
+ 4f2:	80 81       	ld	r24, Z
+ 4f4:	8f 7d       	andi	r24, 0xDF	; 223
+ 4f6:	8c 93       	st	X, r24
+		PORTA |= (1<<6);
+ 4f8:	ab e3       	ldi	r26, 0x3B	; 59
+ 4fa:	b0 e0       	ldi	r27, 0x00	; 0
+ 4fc:	eb e3       	ldi	r30, 0x3B	; 59
+ 4fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 500:	80 81       	ld	r24, Z
+ 502:	80 64       	ori	r24, 0x40	; 64
+ 504:	8c 93       	st	X, r24
+		PORTA |= (1<<7);
+ 506:	ab e3       	ldi	r26, 0x3B	; 59
+ 508:	b0 e0       	ldi	r27, 0x00	; 0
+ 50a:	eb e3       	ldi	r30, 0x3B	; 59
+ 50c:	f0 e0       	ldi	r31, 0x00	; 0
+ 50e:	80 81       	ld	r24, Z
+ 510:	80 68       	ori	r24, 0x80	; 128
+ 512:	8c 93       	st	X, r24
+		break;
+	}
+}
+ 514:	0f 90       	pop	r0
+ 516:	0f 90       	pop	r0
+ 518:	0f 90       	pop	r0
+ 51a:	cf 91       	pop	r28
+ 51c:	df 91       	pop	r29
+ 51e:	08 95       	ret
+
+00000520 <__vector_11>:
+
+ISR(TIMER0_OVF_vect)
+{
+ 520:	1f 92       	push	r1
+ 522:	0f 92       	push	r0
+ 524:	0f b6       	in	r0, 0x3f	; 63
+ 526:	0f 92       	push	r0
+ 528:	11 24       	eor	r1, r1
+ 52a:	2f 93       	push	r18
+ 52c:	3f 93       	push	r19
+ 52e:	4f 93       	push	r20
+ 530:	5f 93       	push	r21
+ 532:	6f 93       	push	r22
+ 534:	7f 93       	push	r23
+ 536:	8f 93       	push	r24
+ 538:	9f 93       	push	r25
+ 53a:	af 93       	push	r26
+ 53c:	bf 93       	push	r27
+ 53e:	ef 93       	push	r30
+ 540:	ff 93       	push	r31
+ 542:	df 93       	push	r29
+ 544:	cf 93       	push	r28
+ 546:	cd b7       	in	r28, 0x3d	; 61
+ 548:	de b7       	in	r29, 0x3e	; 62
+	g_tick++;
+ 54a:	80 91 60 00 	lds	r24, 0x0060
+ 54e:	8f 5f       	subi	r24, 0xFF	; 255
+ 550:	80 93 60 00 	sts	0x0060, r24
+	if(g_tick == NUMBER_OF_OVERFLOWS_PER_SECOND)
+ 554:	80 91 60 00 	lds	r24, 0x0060
+ 558:	8a 3f       	cpi	r24, 0xFA	; 250
+ 55a:	91 f4       	brne	.+36     	; 0x580 <__vector_11+0x60>
+	{
+		// check if overflow occurs at the 7-segment as its maximum count is 9
+		if(g_num == 9)
+ 55c:	80 91 61 00 	lds	r24, 0x0061
+ 560:	89 30       	cpi	r24, 0x09	; 9
+ 562:	19 f4       	brne	.+6      	; 0x56a <__vector_11+0x4a>
+		{
+			g_num = 0;
+ 564:	10 92 61 00 	sts	0x0061, r1
+ 568:	05 c0       	rjmp	.+10     	; 0x574 <__vector_11+0x54>
+		}
+		else
+		{
+			// increment 7-segment every second
+			g_num++;
+ 56a:	80 91 61 00 	lds	r24, 0x0061
+ 56e:	8f 5f       	subi	r24, 0xFF	; 255
+ 570:	80 93 61 00 	sts	0x0061, r24
+		}
+		Eta32mini_SevenSegment_Display(g_num); // Display the digit on the 7-segment
+ 574:	80 91 61 00 	lds	r24, 0x0061
+ 578:	0e 94 3e 00 	call	0x7c	; 0x7c <Eta32mini_SevenSegment_Display>
+		g_tick=0; // reset the ticks counter
+ 57c:	10 92 60 00 	sts	0x0060, r1
+	}
+}
+ 580:	cf 91       	pop	r28
+ 582:	df 91       	pop	r29
+ 584:	ff 91       	pop	r31
+ 586:	ef 91       	pop	r30
+ 588:	bf 91       	pop	r27
+ 58a:	af 91       	pop	r26
+ 58c:	9f 91       	pop	r25
+ 58e:	8f 91       	pop	r24
+ 590:	7f 91       	pop	r23
+ 592:	6f 91       	pop	r22
+ 594:	5f 91       	pop	r21
+ 596:	4f 91       	pop	r20
+ 598:	3f 91       	pop	r19
+ 59a:	2f 91       	pop	r18
+ 59c:	0f 90       	pop	r0
+ 59e:	0f be       	out	0x3f, r0	; 63
+ 5a0:	0f 90       	pop	r0
+ 5a2:	1f 90       	pop	r1
+ 5a4:	18 95       	reti
+
+000005a6 <Timer0_Init_Normal_Mode>:
+ * Timer frequency will be around 64Khz, Ttimer = 15.625us
+ * For initial timer counter = 0, overflow will occur every 4ms (0 --> 255 --> 0)
+ * Overflow interrupt will be generated every 4ms, so we need 250 overflow interrupts to count second.
+ */
+void Timer0_Init_Normal_Mode(void)
+{
+ 5a6:	df 93       	push	r29
+ 5a8:	cf 93       	push	r28
+ 5aa:	cd b7       	in	r28, 0x3d	; 61
+ 5ac:	de b7       	in	r29, 0x3e	; 62
+	TCNT0 = 0; // Set Timer initial value to 0
+ 5ae:	e2 e5       	ldi	r30, 0x52	; 82
+ 5b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 5b2:	10 82       	st	Z, r1
+
+	TIMSK = (1<<TOIE0); // Enable Timer0 Overflow Interrupt
+ 5b4:	e9 e5       	ldi	r30, 0x59	; 89
+ 5b6:	f0 e0       	ldi	r31, 0x00	; 0
+ 5b8:	81 e0       	ldi	r24, 0x01	; 1
+ 5ba:	80 83       	st	Z, r24
+	 * 1. Non PWM mode FOC0=1
+	 * 2. Normal Mode WGM01=0 & WGM00=0
+	 * 3. Normal Mode COM00=0 & COM01=0
+	 * 4. clock = F_CPU/256 CS00=0 CS01=0 CS02=1
+	 */
+	TCCR0 = (1<<FOC0) | (1<<CS02);
+ 5bc:	e3 e5       	ldi	r30, 0x53	; 83
+ 5be:	f0 e0       	ldi	r31, 0x00	; 0
+ 5c0:	84 e8       	ldi	r24, 0x84	; 132
+ 5c2:	80 83       	st	Z, r24
+}
+ 5c4:	cf 91       	pop	r28
+ 5c6:	df 91       	pop	r29
+ 5c8:	08 95       	ret
+
+000005ca <main>:
+
+int main(void)
+{
+ 5ca:	df 93       	push	r29
+ 5cc:	cf 93       	push	r28
+ 5ce:	cd b7       	in	r28, 0x3d	; 61
+ 5d0:	de b7       	in	r29, 0x3e	; 62
+	SREG  |= (1<<7);   // Enable global interrupts in MC.
+ 5d2:	af e5       	ldi	r26, 0x5F	; 95
+ 5d4:	b0 e0       	ldi	r27, 0x00	; 0
+ 5d6:	ef e5       	ldi	r30, 0x5F	; 95
+ 5d8:	f0 e0       	ldi	r31, 0x00	; 0
+ 5da:	80 81       	ld	r24, Z
+ 5dc:	80 68       	ori	r24, 0x80	; 128
+ 5de:	8c 93       	st	X, r24
+
+	// Configure pins as output from PA1 --> PA7
+	DDRA  |= 0xFE;
+ 5e0:	aa e3       	ldi	r26, 0x3A	; 58
+ 5e2:	b0 e0       	ldi	r27, 0x00	; 0
+ 5e4:	ea e3       	ldi	r30, 0x3A	; 58
+ 5e6:	f0 e0       	ldi	r31, 0x00	; 0
+ 5e8:	80 81       	ld	r24, Z
+ 5ea:	8e 6f       	ori	r24, 0xFE	; 254
+ 5ec:	8c 93       	st	X, r24
+
+	DDRC  |= (1<<6);              // configure pin 6 in PORTC as output pin
+ 5ee:	a4 e3       	ldi	r26, 0x34	; 52
+ 5f0:	b0 e0       	ldi	r27, 0x00	; 0
+ 5f2:	e4 e3       	ldi	r30, 0x34	; 52
+ 5f4:	f0 e0       	ldi	r31, 0x00	; 0
+ 5f6:	80 81       	ld	r24, Z
+ 5f8:	80 64       	ori	r24, 0x40	; 64
+ 5fa:	8c 93       	st	X, r24
+
+	// Set pin 6 in PORTC with value 1 to enable the BJT NPN transistor to connect the first 7-segment common to the ground(common cathode)
+	PORTC |= (1<<6);
+ 5fc:	a5 e3       	ldi	r26, 0x35	; 53
+ 5fe:	b0 e0       	ldi	r27, 0x00	; 0
+ 600:	e5 e3       	ldi	r30, 0x35	; 53
+ 602:	f0 e0       	ldi	r31, 0x00	; 0
+ 604:	80 81       	ld	r24, Z
+ 606:	80 64       	ori	r24, 0x40	; 64
+ 608:	8c 93       	st	X, r24
+
+	Eta32mini_SevenSegment_Display(g_num); // Display ZERO value on the 7-segment at the beginning
+ 60a:	80 91 61 00 	lds	r24, 0x0061
+ 60e:	0e 94 3e 00 	call	0x7c	; 0x7c <Eta32mini_SevenSegment_Display>
+
+	Timer0_Init_Normal_Mode();    // Start the timer.
+ 612:	0e 94 d3 02 	call	0x5a6	; 0x5a6 <Timer0_Init_Normal_Mode>
+ 616:	ff cf       	rjmp	.-2      	; 0x616 <main+0x4c>
+
+00000618 <_exit>:
+ 618:	f8 94       	cli
+
+0000061a <__stop_program>:
+ 61a:	ff cf       	rjmp	.-2      	; 0x61a <__stop_program>

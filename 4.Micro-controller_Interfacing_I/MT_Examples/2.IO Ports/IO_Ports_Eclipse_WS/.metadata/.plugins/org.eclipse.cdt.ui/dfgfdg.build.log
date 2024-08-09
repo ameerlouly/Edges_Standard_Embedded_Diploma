@@ -1,0 +1,34 @@
+12:21:12 **** Build of configuration Debug for project dfgfdg ****
+make all 
+Building file: ../dfsf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"dfsf.d" -MT"dfsf.o" -c -o "dfsf.o" "../dfsf.c"
+Finished building: ../dfsf.c
+ 
+Building target: dfgfdg.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,dfgfdg.map -mmcu=atmega16 -o "dfgfdg.elf"  ./dfsf.o   
+Finished building target: dfgfdg.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S dfgfdg.elf  >"dfgfdg.lss"
+Finished building: dfgfdg.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 dfgfdg.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     130 bytes (0.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:21:12 Build Finished. 0 errors, 0 warnings. (took 339ms)
+

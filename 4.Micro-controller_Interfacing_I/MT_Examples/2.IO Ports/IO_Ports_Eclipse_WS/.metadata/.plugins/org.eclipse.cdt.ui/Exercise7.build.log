@@ -1,0 +1,40 @@
+15:40:13 **** Incremental Build of configuration Debug for project Exercise7 ****
+make all 
+Building file: ../Exercise7.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Exercise7.d" -MT"Exercise7.o" -c -o "Exercise7.o" "../Exercise7.c"
+In file included from ../Exercise7.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Exercise7.c
+ 
+Building target: Exercise7.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise7.map -mmcu=atmega32 -o "Exercise7.elf"  ./Exercise7.o   
+Finished building target: Exercise7.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise7.elf  >"Exercise7.lss"
+Finished building: Exercise7.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Exercise7.elf  "Exercise7.hex"
+Finished building: Exercise7.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise7.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4570 bytes (13.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:40:14 Build Finished. 0 errors, 1 warnings. (took 672ms)
+

@@ -1,0 +1,20 @@
+18:38:40 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3808 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:38:40 Build Finished. 0 errors, 0 warnings. (took 448ms)
+

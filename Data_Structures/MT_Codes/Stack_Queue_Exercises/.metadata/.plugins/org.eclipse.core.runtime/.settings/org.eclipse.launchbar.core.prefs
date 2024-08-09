@@ -1,7 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:lmkl.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise1_Stack.exe,org.eclipse.launchbar.core.descriptorType.default\:Exercise2_Queue.exe
-eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:Exercise1_Stack.exe/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:Exercise1_Stack.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

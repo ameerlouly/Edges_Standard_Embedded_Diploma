@@ -1,0 +1,127 @@
+
+Challenge4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000d4  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         00000330  00000000  00000000  00000128  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000688  00000000  00000000  00000458  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 36 00 	call	0x6c	; 0x6c <main>
+  64:	0c 94 68 00 	jmp	0xd0	; 0xd0 <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <main>:
+ */
+
+#include <avr/io.h>
+
+int main(void)
+{
+  6c:	df 93       	push	r29
+  6e:	cf 93       	push	r28
+  70:	cd b7       	in	r28, 0x3d	; 61
+  72:	de b7       	in	r29, 0x3e	; 62
+	DDRC &= ~(1<<PC0);	/* Set the PIR pin as input pin */
+  74:	a4 e3       	ldi	r26, 0x34	; 52
+  76:	b0 e0       	ldi	r27, 0x00	; 0
+  78:	e4 e3       	ldi	r30, 0x34	; 52
+  7a:	f0 e0       	ldi	r31, 0x00	; 0
+  7c:	80 81       	ld	r24, Z
+  7e:	8e 7f       	andi	r24, 0xFE	; 254
+  80:	8c 93       	st	X, r24
+
+	DDRB |= (1<<PB0);	/* Set the LED pin as output pin */
+  82:	a7 e3       	ldi	r26, 0x37	; 55
+  84:	b0 e0       	ldi	r27, 0x00	; 0
+  86:	e7 e3       	ldi	r30, 0x37	; 55
+  88:	f0 e0       	ldi	r31, 0x00	; 0
+  8a:	80 81       	ld	r24, Z
+  8c:	81 60       	ori	r24, 0x01	; 1
+  8e:	8c 93       	st	X, r24
+	PORTB &= ~(1<<PB0); /* Set pin 0 in PORTB with value 0 at the beginning(LED OFF) */
+  90:	a8 e3       	ldi	r26, 0x38	; 56
+  92:	b0 e0       	ldi	r27, 0x00	; 0
+  94:	e8 e3       	ldi	r30, 0x38	; 56
+  96:	f0 e0       	ldi	r31, 0x00	; 0
+  98:	80 81       	ld	r24, Z
+  9a:	8e 7f       	andi	r24, 0xFE	; 254
+  9c:	8c 93       	st	X, r24
+
+    while(1)
+    {
+    	if(PINC & (1<<PC0)) /* Check for high signal (motion detected) */
+  9e:	e3 e3       	ldi	r30, 0x33	; 51
+  a0:	f0 e0       	ldi	r31, 0x00	; 0
+  a2:	80 81       	ld	r24, Z
+  a4:	88 2f       	mov	r24, r24
+  a6:	90 e0       	ldi	r25, 0x00	; 0
+  a8:	81 70       	andi	r24, 0x01	; 1
+  aa:	90 70       	andi	r25, 0x00	; 0
+  ac:	88 23       	and	r24, r24
+  ae:	41 f0       	breq	.+16     	; 0xc0 <main+0x54>
+    	{
+    		PORTB |= (1<<PB0); /* LED ON when the motion is detect */
+  b0:	a8 e3       	ldi	r26, 0x38	; 56
+  b2:	b0 e0       	ldi	r27, 0x00	; 0
+  b4:	e8 e3       	ldi	r30, 0x38	; 56
+  b6:	f0 e0       	ldi	r31, 0x00	; 0
+  b8:	80 81       	ld	r24, Z
+  ba:	81 60       	ori	r24, 0x01	; 1
+  bc:	8c 93       	st	X, r24
+  be:	ef cf       	rjmp	.-34     	; 0x9e <main+0x32>
+    	}
+    	else
+    	{
+    		PORTB &= ~(1<<PB0); /* LED OFF */
+  c0:	a8 e3       	ldi	r26, 0x38	; 56
+  c2:	b0 e0       	ldi	r27, 0x00	; 0
+  c4:	e8 e3       	ldi	r30, 0x38	; 56
+  c6:	f0 e0       	ldi	r31, 0x00	; 0
+  c8:	80 81       	ld	r24, Z
+  ca:	8e 7f       	andi	r24, 0xFE	; 254
+  cc:	8c 93       	st	X, r24
+  ce:	e7 cf       	rjmp	.-50     	; 0x9e <main+0x32>
+
+000000d0 <_exit>:
+  d0:	f8 94       	cli
+
+000000d2 <__stop_program>:
+  d2:	ff cf       	rjmp	.-2      	; 0xd2 <__stop_program>

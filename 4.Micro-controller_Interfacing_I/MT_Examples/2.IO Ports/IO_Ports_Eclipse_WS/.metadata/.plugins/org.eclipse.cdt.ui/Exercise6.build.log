@@ -1,0 +1,20 @@
+18:36:55 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3392 bytes (10.4% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:36:56 Build Finished. 0 errors, 0 warnings. (took 150ms)
+

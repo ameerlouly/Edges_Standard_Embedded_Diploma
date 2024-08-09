@@ -1,0 +1,221 @@
+
+Challenge.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000164  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000001  00800060  00800060  000001d8  2**0
+                  ALLOC
+  2 .stab         000003c0  00000000  00000000  000001d8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      000006b9  00000000  00000000  00000598  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__vector_3>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a1 36       	cpi	r26, 0x61	; 97
+  6c:	b1 07       	cpc	r27, r17
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 9b 00 	call	0x136	; 0x136 <main>
+  74:	0c 94 b0 00 	jmp	0x160	; 0x160 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <__vector_3>:
+/* global variable contain the 7-seg count value */
+unsigned char g_num = 0;
+
+/* External INT2 Interrupt Service Routine */
+ISR(INT2_vect)
+{
+  7c:	1f 92       	push	r1
+  7e:	0f 92       	push	r0
+  80:	0f b6       	in	r0, 0x3f	; 63
+  82:	0f 92       	push	r0
+  84:	11 24       	eor	r1, r1
+  86:	8f 93       	push	r24
+  88:	9f 93       	push	r25
+  8a:	af 93       	push	r26
+  8c:	bf 93       	push	r27
+  8e:	ef 93       	push	r30
+  90:	ff 93       	push	r31
+  92:	df 93       	push	r29
+  94:	cf 93       	push	r28
+  96:	cd b7       	in	r28, 0x3d	; 61
+  98:	de b7       	in	r29, 0x3e	; 62
+	// check if overflow occurs at the 7-segment as its maximum count is 9
+	if((PORTC & 0x0F) == 9)
+  9a:	e5 e3       	ldi	r30, 0x35	; 53
+  9c:	f0 e0       	ldi	r31, 0x00	; 0
+  9e:	80 81       	ld	r24, Z
+  a0:	88 2f       	mov	r24, r24
+  a2:	90 e0       	ldi	r25, 0x00	; 0
+  a4:	8f 70       	andi	r24, 0x0F	; 15
+  a6:	90 70       	andi	r25, 0x00	; 0
+  a8:	89 30       	cpi	r24, 0x09	; 9
+  aa:	91 05       	cpc	r25, r1
+  ac:	19 f4       	brne	.+6      	; 0xb4 <__vector_3+0x38>
+	{
+		g_num = 0;
+  ae:	10 92 60 00 	sts	0x0060, r1
+  b2:	05 c0       	rjmp	.+10     	; 0xbe <__vector_3+0x42>
+	}
+	else
+	{
+		// increment 7-segment every interrupt
+		g_num++;
+  b4:	80 91 60 00 	lds	r24, 0x0060
+  b8:	8f 5f       	subi	r24, 0xFF	; 255
+  ba:	80 93 60 00 	sts	0x0060, r24
+	}
+	// Display the required number on the 7-segment
+	PORTC = (PORTC & 0xF0) | (g_num & 0x0F);
+  be:	a5 e3       	ldi	r26, 0x35	; 53
+  c0:	b0 e0       	ldi	r27, 0x00	; 0
+  c2:	e5 e3       	ldi	r30, 0x35	; 53
+  c4:	f0 e0       	ldi	r31, 0x00	; 0
+  c6:	80 81       	ld	r24, Z
+  c8:	98 2f       	mov	r25, r24
+  ca:	90 7f       	andi	r25, 0xF0	; 240
+  cc:	80 91 60 00 	lds	r24, 0x0060
+  d0:	8f 70       	andi	r24, 0x0F	; 15
+  d2:	89 2b       	or	r24, r25
+  d4:	8c 93       	st	X, r24
+}
+  d6:	cf 91       	pop	r28
+  d8:	df 91       	pop	r29
+  da:	ff 91       	pop	r31
+  dc:	ef 91       	pop	r30
+  de:	bf 91       	pop	r27
+  e0:	af 91       	pop	r26
+  e2:	9f 91       	pop	r25
+  e4:	8f 91       	pop	r24
+  e6:	0f 90       	pop	r0
+  e8:	0f be       	out	0x3f, r0	; 63
+  ea:	0f 90       	pop	r0
+  ec:	1f 90       	pop	r1
+  ee:	18 95       	reti
+
+000000f0 <INT2_Init>:
+
+/* External INT2 enable and configuration function */
+void INT2_Init(void)
+{
+  f0:	df 93       	push	r29
+  f2:	cf 93       	push	r28
+  f4:	cd b7       	in	r28, 0x3d	; 61
+  f6:	de b7       	in	r29, 0x3e	; 62
+	DDRB   &= (~(1<<PB2));   // Configure INT2/PB2 as input pin
+  f8:	a7 e3       	ldi	r26, 0x37	; 55
+  fa:	b0 e0       	ldi	r27, 0x00	; 0
+  fc:	e7 e3       	ldi	r30, 0x37	; 55
+  fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 100:	80 81       	ld	r24, Z
+ 102:	8b 7f       	andi	r24, 0xFB	; 251
+ 104:	8c 93       	st	X, r24
+	MCUCSR |= (1<<ISC2);     // Trigger INT2 with the raising edge
+ 106:	a4 e5       	ldi	r26, 0x54	; 84
+ 108:	b0 e0       	ldi	r27, 0x00	; 0
+ 10a:	e4 e5       	ldi	r30, 0x54	; 84
+ 10c:	f0 e0       	ldi	r31, 0x00	; 0
+ 10e:	80 81       	ld	r24, Z
+ 110:	80 64       	ori	r24, 0x40	; 64
+ 112:	8c 93       	st	X, r24
+	GICR   |= (1<<INT2);	 // Enable external interrupt pin INT2
+ 114:	ab e5       	ldi	r26, 0x5B	; 91
+ 116:	b0 e0       	ldi	r27, 0x00	; 0
+ 118:	eb e5       	ldi	r30, 0x5B	; 91
+ 11a:	f0 e0       	ldi	r31, 0x00	; 0
+ 11c:	80 81       	ld	r24, Z
+ 11e:	80 62       	ori	r24, 0x20	; 32
+ 120:	8c 93       	st	X, r24
+	SREG   |= (1<<7);        // Enable interrupts by setting I-bit
+ 122:	af e5       	ldi	r26, 0x5F	; 95
+ 124:	b0 e0       	ldi	r27, 0x00	; 0
+ 126:	ef e5       	ldi	r30, 0x5F	; 95
+ 128:	f0 e0       	ldi	r31, 0x00	; 0
+ 12a:	80 81       	ld	r24, Z
+ 12c:	80 68       	ori	r24, 0x80	; 128
+ 12e:	8c 93       	st	X, r24
+}
+ 130:	cf 91       	pop	r28
+ 132:	df 91       	pop	r29
+ 134:	08 95       	ret
+
+00000136 <main>:
+
+int main(void)
+{
+ 136:	df 93       	push	r29
+ 138:	cf 93       	push	r28
+ 13a:	cd b7       	in	r28, 0x3d	; 61
+ 13c:	de b7       	in	r29, 0x3e	; 62
+	DDRC |= 0x0F; 			// Configure the first four pins in PORTC as output pins.
+ 13e:	a4 e3       	ldi	r26, 0x34	; 52
+ 140:	b0 e0       	ldi	r27, 0x00	; 0
+ 142:	e4 e3       	ldi	r30, 0x34	; 52
+ 144:	f0 e0       	ldi	r31, 0x00	; 0
+ 146:	80 81       	ld	r24, Z
+ 148:	8f 60       	ori	r24, 0x0F	; 15
+ 14a:	8c 93       	st	X, r24
+	PORTC &= 0xF0; 		    // 7-segment display zero at the beginning.
+ 14c:	a5 e3       	ldi	r26, 0x35	; 53
+ 14e:	b0 e0       	ldi	r27, 0x00	; 0
+ 150:	e5 e3       	ldi	r30, 0x35	; 53
+ 152:	f0 e0       	ldi	r31, 0x00	; 0
+ 154:	80 81       	ld	r24, Z
+ 156:	80 7f       	andi	r24, 0xF0	; 240
+ 158:	8c 93       	st	X, r24
+	
+	INT2_Init(); 			// Enable external INT2
+ 15a:	0e 94 78 00 	call	0xf0	; 0xf0 <INT2_Init>
+ 15e:	ff cf       	rjmp	.-2      	; 0x15e <main+0x28>
+
+00000160 <_exit>:
+ 160:	f8 94       	cli
+
+00000162 <__stop_program>:
+ 162:	ff cf       	rjmp	.-2      	; 0x162 <__stop_program>

@@ -1,0 +1,36 @@
+22:54:52 **** Build of configuration Debug for project xcv ****
+make all 
+Building file: ../Exercise4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Exercise4.d" -MT"Exercise4.o" -c -o "Exercise4.o" "../Exercise4.c"
+In file included from ../Exercise4.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Exercise4.c
+ 
+Building target: xcv.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,xcv.map -mmcu=atmega32 -o "xcv.elf"  ./Exercise4.o   
+Finished building target: xcv.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S xcv.elf  >"xcv.lss"
+Finished building: xcv.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 xcv.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3808 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:54:53 Build Finished. 0 errors, 1 warnings. (took 1s.88ms)
+

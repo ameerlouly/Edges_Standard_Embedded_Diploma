@@ -1,0 +1,34 @@
+18:36:52 **** Build of configuration Debug for project Challenge4 ****
+make all 
+Building file: ../Challenge4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Challenge4.d" -MT"Challenge4.o" -c -o "Challenge4.o" "../Challenge4.c"
+Finished building: ../Challenge4.c
+ 
+Building target: Challenge4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge4.map -mmcu=atmega32 -o "Challenge4.elf"  ./Challenge4.o   
+Finished building target: Challenge4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge4.elf  >"Challenge4.lss"
+Finished building: Challenge4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     212 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:36:53 Build Finished. 0 errors, 0 warnings. (took 463ms)
+

@@ -1,0 +1,2173 @@
+21:47:23 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Building file: ../Challenge4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Challenge4.d" -MT"Challenge4.o" -c -o "Challenge4.o" "../Challenge4.c"
+Finished building: ../Challenge4.c
+ 
+Building target: Challenge4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge4.map -mmcu=atmega32 -o "Challenge4.elf"  ./Challenge4.o   
+Finished building target: Challenge4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge4.elf  >"Challenge4.lss"
+Finished building: Challenge4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:45 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Building file: ../Challenge1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Challenge1.d" -MT"Challenge1.o" -c -o "Challenge1.o" "../Challenge1.c"
+Finished building: ../Challenge1.c
+ 
+Building target: Challenge1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge1.map -mmcu=atmega32 -o "Challenge1.elf"  ./Challenge1.o   
+Finished building target: Challenge1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge1.elf  >"Challenge1.lss"
+Finished building: Challenge1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:45 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:46 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:46 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:46 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:47 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Building file: ../Exercise1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Exercise1.d" -MT"Exercise1.o" -c -o "Exercise1.o" "../Exercise1.c"
+Finished building: ../Exercise1.c
+ 
+Building target: Exercise1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise1.map -mmcu=atmega32 -o "Exercise1.elf"  ./Exercise1.o   
+Finished building target: Exercise1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise1.elf  >"Exercise1.lss"
+Finished building: Exercise1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:47 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Building file: ../Exercise2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Exercise2.d" -MT"Exercise2.o" -c -o "Exercise2.o" "../Exercise2.c"
+Finished building: ../Exercise2.c
+ 
+Building target: Exercise2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise2.map -mmcu=atmega32 -o "Exercise2.elf"  ./Exercise2.o   
+Finished building target: Exercise2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise2.elf  >"Exercise2.lss"
+Finished building: Exercise2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:48 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Building file: ../Exercise3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Exercise3.d" -MT"Exercise3.o" -c -o "Exercise3.o" "../Exercise3.c"
+Finished building: ../Exercise3.c
+ 
+Building target: Exercise3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise3.map -mmcu=atmega32 -o "Exercise3.elf"  ./Exercise3.o   
+Finished building target: Exercise3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise3.elf  >"Exercise3.lss"
+Finished building: Exercise3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:48 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:49 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Building file: ../Exercise4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Exercise4.d" -MT"Exercise4.o" -c -o "Exercise4.o" "../Exercise4.c"
+Finished building: ../Exercise4.c
+ 
+Building target: Exercise4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise4.map -mmcu=atmega32 -o "Exercise4.elf"  ./Exercise4.o   
+Finished building target: Exercise4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise4.elf  >"Exercise4.lss"
+Finished building: Exercise4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:49 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:49:50 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:54 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:55 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:55 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:55 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:55 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:56 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:56 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:56 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:57 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:57 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:57 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:56:58 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:14 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:14 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:15 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:15 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:15 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:15 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:16 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:16 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:16 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:17 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:17 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:44:17 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:04 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:04 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:04 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:05 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:05 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:05 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:05 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:06 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:06 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:06 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:06 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:45:07 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:35:59 **** Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:01 **** Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:01 **** Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:01 **** Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:01 **** Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:02 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:02 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:02 **** Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:02 **** Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:03 **** Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:03 **** Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:36:03 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:44 **** Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:45 **** Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:45 **** Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:46 **** Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:46 **** Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:46 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:46 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:47 **** Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:47 **** Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:47 **** Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:49 **** Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:49 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:43 **** Build of configuration Debug for project Challenge1 ****
+make all 
+Building file: ../Challenge1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Challenge1.d" -MT"Challenge1.o" -c -o "Challenge1.o" "../Challenge1.c"
+Finished building: ../Challenge1.c
+ 
+Building target: Challenge1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge1.map -mmcu=atmega32 -o "Challenge1.elf"  ./Challenge1.o   
+Finished building target: Challenge1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge1.elf  >"Challenge1.lss"
+Finished building: Challenge1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:44 **** Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Building file: ../Challenge1_Eta32mini.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Challenge1_Eta32mini.d" -MT"Challenge1_Eta32mini.o" -c -o "Challenge1_Eta32mini.o" "../Challenge1_Eta32mini.c"
+Finished building: ../Challenge1_Eta32mini.c
+ 
+Building target: Challenge1_Eta32mini.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge1_Eta32mini.map -mmcu=atmega32 -o "Challenge1_Eta32mini.elf"  ./Challenge1_Eta32mini.o   
+Finished building target: Challenge1_Eta32mini.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge1_Eta32mini.elf  >"Challenge1_Eta32mini.lss"
+Finished building: Challenge1_Eta32mini.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Challenge1_Eta32mini.elf  "Challenge1_Eta32mini.hex"
+Finished building: Challenge1_Eta32mini.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:44 **** Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:45 **** Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:45 **** Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:45 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:46 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:46 **** Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:46 **** Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:46 **** Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:47 **** Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:47 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:57 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:58 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:58 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:58 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:58 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:58 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:59 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:59 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:59 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:03:59 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:00 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:00 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:11 **** Incremental Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:12 **** Incremental Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:12 **** Incremental Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:13 **** Incremental Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:13 **** Incremental Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:13 **** Incremental Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:13 **** Incremental Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:13 **** Incremental Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:14 **** Incremental Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:14 **** Incremental Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:14 **** Incremental Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:14 **** Incremental Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:43 **** Build of configuration Debug for project Challenge1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     382 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:44 **** Build of configuration Debug for project Challenge1_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge1_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1564 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:44 **** Build of configuration Debug for project Challenge2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     386 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:44 **** Build of configuration Debug for project Challenge3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     184 bytes (1.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:45 **** Build of configuration Debug for project Challenge4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Challenge4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     392 bytes (1.2% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:45 **** Build of configuration Debug for project Exercise1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     288 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:45 **** Build of configuration Debug for project Exercise2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     330 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:46 **** Build of configuration Debug for project Exercise3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:46 **** Build of configuration Debug for project Exercise3_Eta32mini ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise3_Eta32mini.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     336 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:47 **** Build of configuration Debug for project Exercise4 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise4.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     176 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:47 **** Build of configuration Debug for project Exercise5 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise5.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3310 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:37:47 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3804 bytes (11.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

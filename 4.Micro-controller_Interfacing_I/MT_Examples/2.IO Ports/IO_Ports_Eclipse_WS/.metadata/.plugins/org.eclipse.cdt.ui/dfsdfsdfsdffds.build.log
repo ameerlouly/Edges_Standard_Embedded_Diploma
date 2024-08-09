@@ -1,0 +1,34 @@
+20:15:47 **** Build of configuration Debug for project dfsdfsdfsdffds ****
+make all 
+Building file: ../Exercise1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Exercise1.d" -MT"Exercise1.o" -c -o "Exercise1.o" "../Exercise1.c"
+Finished building: ../Exercise1.c
+ 
+Building target: dfsdfsdfsdffds.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,dfsdfsdfsdffds.map -mmcu=atmega16 -o "dfsdfsdfsdffds.elf"  ./Exercise1.o   
+Finished building target: dfsdfsdfsdffds.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S dfsdfsdfsdffds.elf  >"dfsdfsdfsdffds.lss"
+Finished building: dfsdfsdfsdffds.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 dfsdfsdfsdffds.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     212 bytes (1.3% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:15:49 Build Finished. 0 errors, 0 warnings. (took 1s.555ms)
+
